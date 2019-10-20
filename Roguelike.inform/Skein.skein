@@ -9,10 +9,10 @@
 
 Roguelike Goose
 An Interactive Fiction by lizzard
-Release 1 / Serial number 191019 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 191020 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Magnificent ruins
-Crumbling stone in a blasted wasteland. Grey trees grow twisting from crevices in the walls. A narrow staircase descends into darkness.
+Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. 
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -459,13 +459,19 @@ There is no way out.
 Dungeon Entrance
 Stone walls, mildewed with glowing stuff, widen into a large bare room.
 
-Exits: east (Uncanny Lair)
+You can see a spider and a giant rat here.
+
+Exits: south (Hall of Time)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2948"></child>
+        <children><child nodeId="node-3178"></child>
+            <child nodeId="node-3196"></child>
+            <child nodeId="node-2948"></child>
             <child nodeId="node-2912"></child>
             <child nodeId="node-2898"></child>
+            <child nodeId="node-3174"></child>
+            <child nodeId="node-3182"></child>
             <child nodeId="node-2893"></child>
             <child nodeId="node-2865"></child>
             <child nodeId="node-2864"></child>
@@ -482,12 +488,11 @@ Exits: east (Uncanny Lair)
     <item nodeId="node-2791">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
-Webby Corridor
-Dusty ropes of thick spiderweb festoon the walls.
+Vault of Vastness
+You can see a tentacled horror here.
 
-You can see a gelatinous cube here.
+Exits: east (Dungeon Entrance) or down (Den of Darkness)
 
-Exits: east (Dungeon Entrance) or west (Chamber of Lights)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2805"></child>
@@ -969,9 +974,12 @@ Exits: north (Marble Halls) or east (Jewelled Forest)
     </item>
     <item nodeId="node-2805">
         <command xml:space="preserve">d</command>
-        <result xml:space="preserve">You can't go that way.
+        <result xml:space="preserve">
+Den of Darkness
+You can see a glowering elf here.
 
-Exits: east or west
+Exits: west (Marble Halls) or up (Vault of Vastness)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2806"></child>
@@ -979,18 +987,16 @@ Exits: east or west
     </item>
     <item nodeId="node-2806">
         <command xml:space="preserve">w</command>
-        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
-Cardinal directions: north, south, east, west and down
-removing east because you just came from there 
-~~~~ next direction will be west
+        <result xml:space="preserve">
+Marble Halls
+White flowstone gleams in thick curtains on the walls of this magnificent hall.
 
-Waterfall Pool
-You can see a giant bat here.
+Exits: north (Evil Archives) or east (Den of Darkness)
 
-Exits: east or west
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-2807"></child>
+        <children><child nodeId="node-3162"></child>
+            <child nodeId="node-2807"></child>
         </children>
     </item>
     <item nodeId="node-2807">
@@ -1110,6 +1116,124 @@ removing east because you just came from there
 
 Chamber of Lights
 Exits: east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3162">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Evil Archives
+Exits: south (Marble Halls) or east (Chamber of Lights)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3163"></child>
+        </children>
+    </item>
+    <item nodeId="node-3163">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Chamber of Lights
+An uncanny mottled glow emanates from the walls of this high-ceilinged cavern.
+
+Exits: east (Chilly Mausoleum) or west (Evil Archives)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3164"></child>
+        </children>
+    </item>
+    <item nodeId="node-3164">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Chilly Mausoleum
+Exits: north (Hall of Time) or west (Chamber of Lights)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3165"></child>
+        </children>
+    </item>
+    <item nodeId="node-3165">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+Exits: north (Hall of Time) or west (Chamber of Lights)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3166"></child>
+        </children>
+    </item>
+    <item nodeId="node-3166">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Hall of Time
+You can see a kobold here.
+
+Exits: south (Chilly Mausoleum) or down (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3167"></child>
+        </children>
+    </item>
+    <item nodeId="node-3167">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Jewelled Forest
+Exits: north (Disturbing Hallway) or west (Cavern of the Lake of Tears) or up (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3168"></child>
+        </children>
+    </item>
+    <item nodeId="node-3168">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Cavern of the Lake of Tears
+A still, deep lake stretches into the distance. It's vast. You can't see the other side.
+
+Exits: north (Rockslide Cavern) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3169"></child>
+        </children>
+    </item>
+    <item nodeId="node-3169">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Rockslide Cavern) or east (Jewelled Forest) from here.
+
+Exits: north (Rockslide Cavern) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3170"></child>
+        </children>
+    </item>
+    <item nodeId="node-3170">
+        <command xml:space="preserve">swim</command>
+        <result xml:space="preserve">
+The water feels great!
+Ominous, like a grim battleship, you glide across the crystal waters.
+You notice a little beach to the west.
+
+Exits: north (Rockslide Cavern) or east (Jewelled Forest) or west (Shorehaven)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3171"></child>
+        </children>
+    </item>
+    <item nodeId="node-3171">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You get out of the water.
+
+Shorehaven
+Exits: east (Cavern of the Lake of Tears) or west (Luminous Gardens)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -2488,6 +2612,48 @@ Stone walls, mildewed with glowing stuff, widen into a large bare room.
     <item nodeId="node-2897">
         <command xml:space="preserve">exits</command>
         <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3182">
+        <command xml:space="preserve">kill rat</command>
+        <result xml:space="preserve">You attack the giant rat, causing 3 points of damage!
+
+The giant rat attacks you, causing 12 points of damage!
+
+You swoon.
+The world shimmers and whirls.
+You wake up nestled into a hollow of warm sand.
+
+Shorehaven
+A peaceful, secluded little beach, just the right size for a dungeon-going goose. You tuck your head under your wing to have a short nap.
+
+Exits: east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3174">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying nothing.
+
+Exits: east (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3175"></child>
+        </children>
+    </item>
+    <item nodeId="node-3175">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Nasty Passage
+A tight squeeze between damp and slimy boulders. There is blood on the ground.
+
+You can see a wispy ghost here.
+
+Exits: west (Dungeon Entrance) or down (Rockslide Cavern)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -3980,6 +4146,60 @@ Unpicked: nothing.
 You have reached a dead end.
 
 Exits: up (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3196">
+        <command xml:space="preserve">attack spider</command>
+        <result xml:space="preserve">You attack the spider, causing 2 points of damage!
+
+The spider attacks you, causing 14 points of damage!
+
+You swoon.
+The world shimmers and whirls.
+You wake up nestled into a hollow of warm sand.
+
+Shorehaven
+A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap.
+
+Exits: east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3178">
+        <command xml:space="preserve">attack rat</command>
+        <result xml:space="preserve">You attack the giant rat, causing 4 points of damage!
+
+The giant rat attacks you, causing 10 points of damage!
+
+Exits: north (Chilly Mausoleum)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3179"></child>
+        </children>
+    </item>
+    <item nodeId="node-3179">
+        <command xml:space="preserve">attack rat</command>
+        <result xml:space="preserve">You attack the giant rat, causing 3 points of damage!
+
+The giant rat falls over, gasping in pain. It drags itself off into the darkness.
+
+Exits: north (Chilly Mausoleum)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3180"></child>
+        </children>
+    </item>
+    <item nodeId="node-3180">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+Exits: north (Chilly Mausoleum)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>

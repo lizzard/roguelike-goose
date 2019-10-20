@@ -38,7 +38,7 @@ After going to a room:
 				let reverse be the opposite of the way;
 				change the reverse exit of nextroom to the location of the player;
 				[put in a creature!]
-				if a random chance of 5 in 10 succeeds:
+				if a random chance of 3 in 10 succeeds:
 					unless Table of Mobs is empty:
 						choose a random row from the Table of Mobs;
 						now creature entry is in the location of the player;
@@ -95,6 +95,11 @@ The description of yourself is "You crane your long, graceful neck to look back.
 
 [Implement peck, honk, flap]
 
+The max hp of the player is 10. The current hp of the player is 10. The str of the player is 3. 
+
+
+
+
 [TODO: implement swimming]
 
 A person can be floating, buoyant, walking, or hopping. A person is usually walking.
@@ -125,17 +130,41 @@ Instead of swimming:
 
 Part 3 - Combat system
 
+A person has a number called max hp. A person has a number called current hp. A person has a number called str. 
+
 
 [combat]
 
+The block attacking rule is not listed in the check attacking rulebook.
+
+Carry out attacking someone:
+	let the damage be a random number between the str of the player and 4;
+	say "You attack [the noun], causing [damage] points of damage!";
+	decrease the current hp of the noun by the damage;
+	if the current hp of the noun is less than 0:
+		say "[line break][The noun] falls over, gasping in pain. It drags itself off into the darkness.";
+		now the noun is nowhere;
+		stop the action;
+	let the enemy damage be a random number between the str of the noun and 15;
+	say "[line break][The noun] attacks you, causing [enemy damage] points of damage!";
+	decrease the current hp of the player by the enemy damage;
+	if the current hp of the player is less than 0:
+		say "[line break]You swoon.";
+		say "The world shimmers and whirls.";
+		say "You wake up nestled into a hollow of warm sand.";
+		now the player is in Shorehaven;
+		continue the action;
+
 [magic]
+
+[stats]
 
 
 
 Part 4 - Locations
 
 
-Magnificent ruins is a room. It is picked. The description is "Crumbling stone in a blasted wasteland. Grey trees grow twisting from crevices in the walls. A narrow staircase descends into darkness."
+Magnificent ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
 After going from Magnificent ruins:
 	say "The walls rumble. Rocks fall.[line break]";
@@ -159,7 +188,7 @@ A pool is in Waterfall Cave. It is scenery.
 Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall."
 
 
-Jewelled Forest is a room. 
+Jewelled Forest is a room. "Marvellous columns march down the length of this immense cavern. Jewel-like lights shine from deep within."
 
 A room called Cavern of the Lake of Tears is west of Jewelled Forest. It is picked. "A still, deep lake stretches into the distance. It's vast. You can't see the other side."   
 
@@ -169,33 +198,34 @@ Before going to the Cavern of the Lake of Tears:
 	now nowhere is mapped west of Cavern of the Lake of Tears;
 	continue the action. 
 	
-Shorehaven is west of The Cavern of the Lake of Tears. It is picked. 
+Shorehaven is west of The Cavern of the Lake of Tears. It is picked. The description is "A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap.";
+[you appear here if you faint in combat, and being here restores your hit points]
 
-Rockslide Cavern is a room.
+Rockslide Cavern is a room. The description is "Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them."
 
-Uncanny Lair is a room.
+Uncanny Lair is a room. The description is "Oddly shaped bones are strewn about this rough cave. Some creature made a nest in one corner out of shredded fungus."
 
-Den of Darkness is a room. 
+Den of Darkness is a room. The description is "The darkness softens, the room is hushed. It's hard to see your way out."
 
-Evil Archives is a room.
+Evil Archives is a room. The description is "Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library."
 
-The Librarian's Lair is a room. It is picked. 
+The Librarian's Lair is a room. It is picked. The description is "This is where the librarian lived, ate, slept, and piled their mildew infested spellbooks to the ceiling. It smells horrible."
 
-Luminous Gardens is a room.
+Luminous Gardens is a room. The description is "Mushrooms the size of trees, glowing, are scattered among winding paths. Tiny lightning bugs flit between snow-pale cave blossoms."
 
-Nasty Passage is a room.
+Nasty Passage is a room. The description is "A tight squeeze between damp and slimy boulders. There is blood on the ground."
 
-Vault of Vastness is a room.
+Vault of Vastness is a room. The description is "Soaring arches overhead, stone display cases and cubbyholes in the walls. The treasure hall of a dragon, emptied of its loot." 
 
-Glittering Shrine is a room.
+Glittering Shrine is a room. The description is "Flecks of shining mica gleam from granite walls."
 
-Vault of Secrets is a room. It is picked. 
+An obsidian altar is an object in Glittering Shrine. It is a supporter. It is fixed in place. The description is "A slab of black glass forms an altar along one wall."
 
-Chilly Mausoleum is a room.
+Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
 
-Crumbling Corridor is a room.
+Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead."
 
-The Hall of Time is a room.
+The Hall of Time is a room. The description is "A long, narrow hall, flickering with light from magefire sconces. The painted walls show the progression of time through planets and stars, sun and moons."
 
 
 
@@ -204,22 +234,40 @@ Part 5 - NPCs
 
 A creature is a kind of person. 
 
-A spider, a kobold, a gelatinous cube, a cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, and an iridium bat are creatures.
+A spider is a creature. 
+A kobold is a creature. 
+A gelatinous cube is a creature. 
+A cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, a confused adventurer, and an iridium bat are creatures.
 
-A sleeping dragon is a creature. 
+Assigning hp is an action applying to one thing. 
+
+When play begins:
+	assign hp;
+	
+To assign hp:
+	repeat through the Table of Mobs:
+		now the max hp of the creature entry is max hp entry;
+		now the current hp of the creature entry is current hp entry;
+		now the str of the creature entry is str entry;
+
+A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The str of a sleeping dragon is 3.
+
+A giant rat is a creature. It is in Dungeon Entrance.
+The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1.
 
 Table of Mobs
-creature
-spider
-kobold
-gelatinous cube 
-cave snake
-iridium bat
-glowering elf
-tentacled horror
-soot sprite
-lumbering mummy
-wispy ghost
+creature	max hp	current hp	str
+spider	3	3	1
+kobold	5	5	1
+gelatinous cube	10	10	3
+cave snake	8	8	2
+iridium bat	12	12	3
+glowering elf	15	15	3
+tentacled horror	15	15	4
+soot sprite	4	4	1
+lumbering mummy	6	6	2
+confused adventurer	10	10	2
+wispy ghost	9	9	2
 
 Part 6 - Objects
 
