@@ -12,12 +12,15 @@ Section 2 - Create the map dynamically
 A room can be picked or unpicked. A room is usually unpicked.
 
 After going to a room:
-	if there are more than 12 unvisited rooms:
+	if the player is buoyant:
+		say "You get out of the water.";
+		now the player is walking;
+	if there are more than 0 unvisited rooms:
 		[say "Unvisted: [list of unvisited rooms].";]
 		if the player is in a room for the first time:
 			now the location of the player is picked;
 			[say "Unpicked: [list of unpicked rooms].";]
-			if there are more than 12 unpicked rooms:
+			if there are more than 0 unpicked rooms:
 				let nextroom be a random unpicked room;
 				[say "~~~~ next room will be [nextroom][line break]";]
 	        	   [here i need to exclude the direction player just came from]
@@ -64,7 +67,8 @@ Every turn:
 		let place be the room way from the location;
 		if place is a room:
 			increment count;			
-			say "[if count is greater than 1] or [end if][way] ([place])". 
+			say "[if count is greater than 1] or [end if][way] ([place])";
+	say "[line break]"; 
 	
 
 [It's still nice to have an explicit exit lister command]
@@ -91,7 +95,26 @@ The description of yourself is "You crane your long, graceful neck to look back.
 
 [Implement peck, honk, flap]
 
-[TODO: implement swimming, which may heal HP]
+[TODO: implement swimming]
+
+A person can be floating, buoyant, walking, or hopping. A person is usually walking.
+
+
+Understand "swim" as swimming. Swimming is an action applying to nothing.
+
+Instead of swimming:
+	if the location of the player is Cavern of the Lake of Tears or the location of the player is Waterfall Cave:
+		say "[line break]The water feels great!";
+		say "Ominous, like a grim battleship, you glide across the crystal waters.";
+		now the player is buoyant;
+		if the location of the player is Cavern of the Lake of Tears:
+			now Shorehaven is mapped west of Cavern of the Lake of Tears;
+			say "You notice a little beach to the west.";
+			stop the action.
+		
+
+	
+
 
 [Classes: Rogue, Witch, Warrior, Bard]
 
@@ -111,11 +134,13 @@ Part 3 - Combat system
 
 Part 4 - Locations
 
-Magnificent ruins is a room. It is picked. The description is "Crumbling stone, trees growing from crevices in the walls, and a narrow staircase leading down into darkness."
+
+Magnificent ruins is a room. It is picked. The description is "Crumbling stone in a blasted wasteland. Grey trees grow twisting from crevices in the walls. A narrow staircase descends into darkness."
 
 After going from Magnificent ruins:
-	say "The walls rumble. You can't see the sky anymore!";
-	say "The way out of the dungeon has mysteriously closed.";
+	say "The walls rumble. Rocks fall.[line break]";
+	say "You can't see the sky anymore![line break]";
+	say "There is no way out.";
 	now Magnificent Ruins is mapped up of nowhere;
 	continue the action;
 
@@ -127,13 +152,24 @@ Chamber of Lights is a room. The description is "An uncanny mottled glow emanate
 
 Disturbing Hallway is a room. "The angles here, the colors, the feel of the air -- just wrong. Horribly wrong."
 
-Waterfall Pool is a room. "Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath."
+Waterfall Cave is a room. "Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath."
+
+A pool is in Waterfall Cave. It is scenery.
 
 Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall."
 
-Lake of Tears is a room.
 
-Jewelled Forest is a room.
+Jewelled Forest is a room. 
+
+A room called Cavern of the Lake of Tears is west of Jewelled Forest. It is picked. "A still, deep lake stretches into the distance. It's vast. You can't see the other side."   
+
+An object called the lake is in Cavern of the Lake of Tears. It is scenery.
+
+Before going to the Cavern of the Lake of Tears:
+	now nowhere is mapped west of Cavern of the Lake of Tears;
+	continue the action. 
+	
+Shorehaven is west of The Cavern of the Lake of Tears. It is picked. 
 
 Rockslide Cavern is a room.
 
@@ -143,19 +179,25 @@ Den of Darkness is a room.
 
 Evil Archives is a room.
 
+The Librarian's Lair is a room. It is picked. 
+
 Luminous Gardens is a room.
 
 Nasty Passage is a room.
 
 Vault of Vastness is a room.
 
-Glittering Shrine is a room
+Glittering Shrine is a room.
+
+Vault of Secrets is a room. It is picked. 
 
 Chilly Mausoleum is a room.
 
 Crumbling Corridor is a room.
 
 The Hall of Time is a room.
+
+
 
 
 Part 5 - NPCs
