@@ -1,0 +1,2808 @@
+<?xml version="1.0"?>
+
+<Skein rootNode="node-2196">
+    <generator>Inform Mac Client (Inform version 1.65/6.33/6M62)</generator>
+    <item nodeId="node-2196">
+        <command xml:space="preserve">Roguelike</command>
+        <result xml:space="preserve">
+
+
+Roguelike Goose
+An Interactive Fiction by lizzard
+Release 1 / Serial number 191019 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+
+Magnificent ruins
+Crumbling stone, trees growing from crevices in the walls, and a narrow staircase leading down into darkness.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2222"></child>
+            <child nodeId="node-2213"></child>
+            <child nodeId="node-2495"></child>
+            <child nodeId="node-2755"></child>
+            <child nodeId="node-2568"></child>
+            <child nodeId="node-2254"></child>
+            <child nodeId="node-2375"></child>
+            <child nodeId="node-2408"></child>
+        </children>
+    </item>
+    <item nodeId="node-2408">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Magnificent ruins - room
+    yourself - person
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2409"></child>
+        </children>
+    </item>
+    <item nodeId="node-2409">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2410"></child>
+        </children>
+    </item>
+    <item nodeId="node-2410">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+The walls rumble. You can't see the sky anymore!
+The exit from the dungeon has mysteriously closed.
+[going down - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2446"></child>
+        </children>
+    </item>
+    <item nodeId="node-2446">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">[listing exits]
+You can go  from here.
+
+[listing exits - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2375">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2376"></child>
+        </children>
+    </item>
+    <item nodeId="node-2376">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: up (Magnificent ruins)
+next room will be Disturbing Hallway
+next exit will be up
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2377"></child>
+        </children>
+    </item>
+    <item nodeId="node-2377">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go south (Disturbing Hallway) or up (Magnificent ruins) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2378"></child>
+        </children>
+    </item>
+    <item nodeId="node-2378">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2379"></child>
+        </children>
+    </item>
+    <item nodeId="node-2379">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2380"></child>
+        </children>
+    </item>
+    <item nodeId="node-2380">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2254">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Magnificent ruins
+Crumbling stone, trees growing from crevices in the walls, and a narrow staircase leading down into darkness.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2255"></child>
+        </children>
+    </item>
+    <item nodeId="node-2255">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: up (Magnificent ruins)next room will be Webby Corridor
+next exit will be inside
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2256"></child>
+        </children>
+    </item>
+    <item nodeId="node-2256">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go west (Webby Corridor) or up (Magnificent ruins) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2568">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go down (Dungeon Entrance) from here.
+
+Exits: down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2569"></child>
+        </children>
+    </item>
+    <item nodeId="node-2569">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. You can't see the sky anymore!
+The exit from the dungeon has mysteriously closed.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+Exits: west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2570"></child>
+        </children>
+    </item>
+    <item nodeId="node-2570">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go west (Den of Darkness) from here.
+
+Exits: west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2755">
+        <command xml:space="preserve">examine self</command>
+        <result xml:space="preserve">You crane your long, graceful neck to look back. 
+White, muscular, hefty, feathered. Yes, you're still a fabulous goose!
+
+Exits: down (Dungeon Entrance)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2495">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2496"></child>
+        </children>
+    </item>
+    <item nodeId="node-2496">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. You can't see the sky anymore!
+The exit from the dungeon has mysteriously closed.
+
+Exits are: 
+next room will be Marble Halls
+next direction will be outside
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2497"></child>
+        </children>
+    </item>
+    <item nodeId="node-2497">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">Exits are: inside (Dungeon Entrance)
+next room will be Waterfall Pool
+next direction will be west
+
+Marble Halls
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2498"></child>
+        </children>
+    </item>
+    <item nodeId="node-2498">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Exits are: east (Marble Halls)
+next room will be Chamber of Lights
+next direction will be down
+
+Waterfall Pool
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2499"></child>
+        </children>
+    </item>
+    <item nodeId="node-2499">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: up (Waterfall Pool)
+next room will be Chamber of Lights
+next direction will be inside
+
+Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2500"></child>
+        </children>
+    </item>
+    <item nodeId="node-2500">
+        <command xml:space="preserve">in</command>
+        <result xml:space="preserve">Exits are: up (Waterfall Pool) or inside (Chamber of Lights) or outside (Chamber of Lights)
+next room will be Lake of Tears
+next direction will be up
+
+Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2501"></child>
+        </children>
+    </item>
+    <item nodeId="node-2501">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">Exits are: down (Chamber of Lights)
+next room will be Lake of Tears
+next direction will be outside
+
+Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2502"></child>
+        </children>
+    </item>
+    <item nodeId="node-2502">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">Exits are: down (Chamber of Lights) or inside (Lake of Tears) or outside (Lake of Tears)
+next room will be Disturbing Hallway
+next direction will be west
+
+Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2503"></child>
+        </children>
+    </item>
+    <item nodeId="node-2503">
+        <command xml:space="preserve">west</command>
+        <result xml:space="preserve">Exits are: east (Lake of Tears)
+next room will be Disturbing Hallway
+next direction will be southwest
+
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2504"></child>
+        </children>
+    </item>
+    <item nodeId="node-2504">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">Exits are: northeast (Disturbing Hallway) or southwest (Disturbing Hallway) or east (Lake of Tears)
+next room will be Webby Corridor
+next direction will be down
+
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2505"></child>
+        </children>
+    </item>
+    <item nodeId="node-2505">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: up (Disturbing Hallway)
+next room will be Webby Corridor
+next direction will be southeast
+
+Webby Corridor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2506"></child>
+        </children>
+    </item>
+    <item nodeId="node-2506">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2507"></child>
+        </children>
+    </item>
+    <item nodeId="node-2507">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Webby Corridor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2213">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. You can't see the sky anymore!
+The exit from the dungeon has mysteriously closed.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+Exits: down (Marble Halls)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2233"></child>
+            <child nodeId="node-2434"></child>
+            <child nodeId="node-2440"></child>
+            <child nodeId="node-2238"></child>
+            <child nodeId="node-2365"></child>
+            <child nodeId="node-2412"></child>
+            <child nodeId="node-2250"></child>
+            <child nodeId="node-2431"></child>
+            <child nodeId="node-2471"></child>
+            <child nodeId="node-2405"></child>
+            <child nodeId="node-2214"></child>
+            <child nodeId="node-2414"></child>
+            <child nodeId="node-2554"></child>
+            <child nodeId="node-2247"></child>
+        </children>
+    </item>
+    <item nodeId="node-2247">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Uncanny Lair
+Exits: east (Dungeon Entrance) or west (Nasty Passage)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2648"></child>
+            <child nodeId="node-2644"></child>
+            <child nodeId="node-2248"></child>
+            <child nodeId="node-2726"></child>
+        </children>
+    </item>
+    <item nodeId="node-2726">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Nasty Passage
+Exits: south (Chilly Mausoleum) or east (Uncanny Lair)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2727"></child>
+            <child nodeId="node-2734"></child>
+        </children>
+    </item>
+    <item nodeId="node-2734">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Chilly Mausoleum
+You can see a wispy ghost here.
+
+Exits: north (Nasty Passage) or down (Lake of Tears)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2735"></child>
+        </children>
+    </item>
+    <item nodeId="node-2735">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Lake of Tears
+You can see an iridium bat here.
+
+Exits: south (Vault of Vastness) or up (Chilly Mausoleum)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2736"></child>
+        </children>
+    </item>
+    <item nodeId="node-2736">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Vault of Vastness
+Exits: north (Lake of Tears) or south (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2737"></child>
+        </children>
+    </item>
+    <item nodeId="node-2737">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You have reached a dead end.
+
+Exits: north (Vault of Vastness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2738"></child>
+        </children>
+    </item>
+    <item nodeId="node-2738">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Rockslide Cavern
+You can see a sleeping dragon here.
+
+Exits: north (Vault of Vastness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2727">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Luminous Gardens
+Exits: south (Chilly Mausoleum) or down (Webby Corridor)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2728"></child>
+        </children>
+    </item>
+    <item nodeId="node-2728">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls.
+
+You can see a wispy ghost here.
+
+Exits: up (Luminous Gardens) or down (Jewelled Forest)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2729"></child>
+        </children>
+    </item>
+    <item nodeId="node-2729">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Jewelled Forest
+You can see a tentacled horror here.
+
+Exits: north (Marble Halls) or up (Webby Corridor)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2730"></child>
+        </children>
+    </item>
+    <item nodeId="node-2730">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Marble Halls
+White flowstone gleams in thick curtains on the walls of this magnificent hall.
+
+Exits: north (Vault of Vastness) or south (Jewelled Forest)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2248">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Marble Halls - room
+    yourself - person
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2644">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Webby Corridor
+Cardinal directions: north, south, west and down
+removing north because you just came from there 
+~~~~ next direction will be down
+
+Marble Halls
+Exits: north or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2645"></child>
+        </children>
+    </item>
+    <item nodeId="node-2645">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
+Cardinal directions: south, west and down
+~~~~ next direction will be south
+
+Webby Corridor
+Exits: south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2648">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">You can't go that way.
+
+Exits: east or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2649"></child>
+        </children>
+    </item>
+    <item nodeId="node-2649">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
+Cardinal directions: north, south, east, west and down
+removing east because you just came from there 
+~~~~ next direction will be west
+
+Waterfall Pool
+You can see a giant bat here.
+
+Exits: east or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2650"></child>
+        </children>
+    </item>
+    <item nodeId="node-2650">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+Cardinal directions: north, south, east, west and down
+removing east because you just came from there 
+~~~~ next direction will be north
+
+Disturbing Hallway
+You can see a spider here.
+
+Exits: north or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2651"></child>
+        </children>
+    </item>
+    <item nodeId="node-2651">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Uncanny Lair
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+~~~~ next direction will be east
+
+Lake of Tears
+You can see a gelatinous cube here.
+
+Exits: south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2652"></child>
+        </children>
+    </item>
+    <item nodeId="node-2652">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+removing west because you just came from there 
+~~~~ next direction will be down
+
+Uncanny Lair
+You can see a cave snake here.
+
+Exits: west or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2653"></child>
+        </children>
+    </item>
+    <item nodeId="node-2653">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Jewelled Forest
+Cardinal directions: north, south, east, west and down
+~~~~ next direction will be south
+
+Den of Darkness
+You can see a kobold here.
+
+Exits: south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2654"></child>
+        </children>
+    </item>
+    <item nodeId="node-2654">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Rockslide Cavern
+Cardinal directions: north, south, east, west and down
+removing north because you just came from there 
+~~~~ next direction will be west
+
+Jewelled Forest
+Exits: north or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2655"></child>
+        </children>
+    </item>
+    <item nodeId="node-2655">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Marble Halls
+Cardinal directions: north, south, east, west and down
+removing east because you just came from there 
+~~~~ next direction will be down
+
+Rockslide Cavern
+Exits: east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2656"></child>
+        </children>
+    </item>
+    <item nodeId="node-2656">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Chamber of Lights
+Cardinal directions: north, south, east, west and down
+~~~~ next direction will be west
+
+Marble Halls
+Exits: west or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2657"></child>
+        </children>
+    </item>
+    <item nodeId="node-2657">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be nothing
+Cardinal directions: north, south, east, west and down
+removing east because you just came from there 
+~~~~ next direction will be west
+
+[** Programming error: tried to find the "." of (something) **]
+
+[** Programming error: tried to find the "." of (something) **]
+
+Chamber of Lights
+Exits: east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2554">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Webby Corridor
+Exits: up or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2555"></child>
+        </children>
+    </item>
+    <item nodeId="node-2555">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Rockslide Cavern
+Exits: west or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2556"></child>
+        </children>
+    </item>
+    <item nodeId="node-2556">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Marble Halls
+Exits: north or south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2557"></child>
+        </children>
+    </item>
+    <item nodeId="node-2557">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Marble Halls
+Exits: north or south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2558"></child>
+        </children>
+    </item>
+    <item nodeId="node-2558">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Uncanny Lair
+Exits: south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2559"></child>
+        </children>
+    </item>
+    <item nodeId="node-2559">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+Exits: east or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2560"></child>
+        </children>
+    </item>
+    <item nodeId="node-2560">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+Exits: east or west or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2561"></child>
+        </children>
+    </item>
+    <item nodeId="node-2561">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+Exits: east or west or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2562"></child>
+        </children>
+    </item>
+    <item nodeId="node-2562">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">
+Den of Darkness
+Exits: north or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2563"></child>
+        </children>
+    </item>
+    <item nodeId="node-2563">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Lake of Tears
+Exits: south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2564"></child>
+        </children>
+    </item>
+    <item nodeId="node-2564">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Den of Darkness
+Exits: north or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2414">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">You're going to a new room.
+
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2437"></child>
+            <child nodeId="node-2415"></child>
+        </children>
+    </item>
+    <item nodeId="node-2415">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2416"></child>
+        </children>
+    </item>
+    <item nodeId="node-2416">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go northeast (Dungeon Entrance) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2417"></child>
+        </children>
+    </item>
+    <item nodeId="node-2417">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2418"></child>
+        </children>
+    </item>
+    <item nodeId="node-2418">
+        <command xml:space="preserve">ls</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2419"></child>
+        </children>
+    </item>
+    <item nodeId="node-2419">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2420"></child>
+        </children>
+    </item>
+    <item nodeId="node-2420">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go southwest (Lake of Tears) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2421"></child>
+        </children>
+    </item>
+    <item nodeId="node-2421">
+        <command xml:space="preserve">sw</command>
+        <result xml:space="preserve">
+Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2422"></child>
+        </children>
+    </item>
+    <item nodeId="node-2422">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2437">
+        <command xml:space="preserve">exit</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2438"></child>
+        </children>
+    </item>
+    <item nodeId="node-2438">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go northeast (Dungeon Entrance) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2214">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Dungeon Entrance - room
+    yourself - person
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2215"></child>
+        </children>
+    </item>
+    <item nodeId="node-2215">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2216"></child>
+        </children>
+    </item>
+    <item nodeId="node-2216">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">[going north]
+You can't go that way.
+[going north - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2217"></child>
+        </children>
+    </item>
+    <item nodeId="node-2217">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">[going south]
+You can't go that way.
+[going south - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2218"></child>
+        </children>
+    </item>
+    <item nodeId="node-2218">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+You can't go that way.
+[going down - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2219"></child>
+        </children>
+    </item>
+    <item nodeId="node-2219">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">[looking]
+Dungeon Entrance
+[looking - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2220"></child>
+        </children>
+    </item>
+    <item nodeId="node-2220">
+        <command xml:space="preserve">u</command>
+        <result xml:space="preserve">[going up]
+
+Magnificent ruins
+[going up - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2221"></child>
+        </children>
+    </item>
+    <item nodeId="node-2221">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+
+Dungeon Entrance
+[going down - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2405">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">
+Webby Corridor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2406"></child>
+        </children>
+    </item>
+    <item nodeId="node-2406">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2407"></child>
+        </children>
+    </item>
+    <item nodeId="node-2407">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2471">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Vault of Vastness
+You can see a kobold here.
+
+Exits: north (Dungeon Entrance) or west (Nasty Passage)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2472"></child>
+            <child nodeId="node-2544"></child>
+        </children>
+    </item>
+    <item nodeId="node-2544">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Nasty Passage
+Exits: east (Vault of Vastness) or down (Webby Corridor)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2742"></child>
+            <child nodeId="node-2545"></child>
+        </children>
+    </item>
+    <item nodeId="node-2545">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go east or west from here.
+
+Exits: east or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2742">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls.
+
+Exits: up (Nasty Passage) or down (Luminous Gardens)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2743"></child>
+        </children>
+    </item>
+    <item nodeId="node-2743">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Luminous Gardens
+Exits: up (Webby Corridor) or down (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2744"></child>
+        </children>
+    </item>
+    <item nodeId="node-2744">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Chamber of Lights
+An uncanny mottled glow emanates from the walls of this high-ceilinged cavern.
+
+Exits: west (Disturbing Hallway) or up (Luminous Gardens)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2745"></child>
+        </children>
+    </item>
+    <item nodeId="node-2745">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You have reached a dead end.
+Something stirs in the darkness.
+
+Exits: east (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2746"></child>
+        </children>
+    </item>
+    <item nodeId="node-2746">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Disturbing Hallway
+The angles here, the colors, the feel of the air -- just wrong. Horribly wrong.
+
+You can see a sleeping dragon here.
+
+Exits: east (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2472">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2473"></child>
+        </children>
+    </item>
+    <item nodeId="node-2473">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2431">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2432"></child>
+        </children>
+    </item>
+    <item nodeId="node-2432">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go inside (Dungeon Entrance) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2250">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2251"></child>
+        </children>
+    </item>
+    <item nodeId="node-2251">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2252"></child>
+        </children>
+    </item>
+    <item nodeId="node-2252">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">You can't go that way.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2253"></child>
+        </children>
+    </item>
+    <item nodeId="node-2253">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go up (Magnificent ruins) from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2412">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">
+Marble Halls
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2365">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Rockslide Cavern
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+~~~~ next direction will be down
+
+Lake of Tears
+Exits: south or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2660"></child>
+            <child nodeId="node-2366"></child>
+            <child nodeId="node-2617"></child>
+        </children>
+    </item>
+    <item nodeId="node-2617">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Jewelled Forest
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, west and down
+~~~~ next direction will be down
+
+Rockslide Cavern
+Exits: east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2618"></child>
+        </children>
+    </item>
+    <item nodeId="node-2618">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+~~~~ next direction will be down
+
+Jewelled Forest
+Exits: up or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2619"></child>
+        </children>
+    </item>
+    <item nodeId="node-2619">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Waterfall Pool
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+~~~~ next direction will be east
+
+Lake of Tears
+Exits: east or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2620"></child>
+        </children>
+    </item>
+    <item nodeId="node-2620">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Marble Halls
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east and down
+~~~~ next direction will be west
+
+Waterfall Pool
+Exits: west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2621"></child>
+        </children>
+    </item>
+    <item nodeId="node-2621">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Chamber of Lights
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, west and down
+~~~~ next direction will be down
+
+Marble Halls
+You can see a kobold here.
+
+Exits: east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2622"></child>
+        </children>
+    </item>
+    <item nodeId="node-2622">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+~~~~ next direction will be down
+
+Chamber of Lights
+You can see a gelatinous cube here.
+
+Exits: up or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2623"></child>
+        </children>
+    </item>
+    <item nodeId="node-2623">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Uncanny Lair
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+~~~~ next direction will be east
+
+Den of Darkness
+You can see a cave snake here.
+
+Exits: east or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2624"></child>
+        </children>
+    </item>
+    <item nodeId="node-2624">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Webby Corridor
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east and down
+~~~~ next direction will be down
+
+*** Run-time problem P26: Attempt to choose a random row in an entirely blank table: table 'Table of Mobs'.
+
+
+Uncanny Lair
+Exits: west or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2366">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2367"></child>
+        </children>
+    </item>
+    <item nodeId="node-2367">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2368"></child>
+        </children>
+    </item>
+    <item nodeId="node-2368">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2369"></child>
+        </children>
+    </item>
+    <item nodeId="node-2369">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">[looking]
+Chamber of Lights
+[looking - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2370"></child>
+        </children>
+    </item>
+    <item nodeId="node-2370">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">[going south]
+You can't go that way.
+[going south - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2371"></child>
+        </children>
+    </item>
+    <item nodeId="node-2371">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">[going north]
+You can't go that way.
+[going north - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2372"></child>
+        </children>
+    </item>
+    <item nodeId="node-2372">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">[going east]
+You can't go that way.
+[going east - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2373"></child>
+        </children>
+    </item>
+    <item nodeId="node-2373">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+You can't go that way.
+[going down - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2374"></child>
+        </children>
+    </item>
+    <item nodeId="node-2374">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">[going up]
+You can't go that way.
+[going up - failed the can't go that way rule]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2660">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Uncanny Lair
+Cardinal directions: north, south, east, west and down
+~~~~ next direction will be south
+
+Rockslide Cavern
+Exits: south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2661"></child>
+        </children>
+    </item>
+    <item nodeId="node-2661">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+removing north because you just came from there 
+~~~~ next direction will be down
+
+Uncanny Lair
+You can see a spider here.
+
+Exits: north or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2662"></child>
+        </children>
+    </item>
+    <item nodeId="node-2662">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Marble Halls
+Cardinal directions: north, south, east, west and down
+~~~~ next direction will be north
+
+Den of Darkness
+You can see a giant bat here.
+
+Exits: north or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2663"></child>
+        </children>
+    </item>
+    <item nodeId="node-2663">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Waterfall Pool
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+~~~~ next direction will be north
+
+Marble Halls
+Exits: north or south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2664"></child>
+        </children>
+    </item>
+    <item nodeId="node-2664">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Webby Corridor
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+~~~~ next direction will be east
+
+Waterfall Pool
+Exits: south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2665"></child>
+        </children>
+    </item>
+    <item nodeId="node-2665">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Jewelled Forest
+Cardinal directions: north, south, east, west and down
+removing west because you just came from there 
+~~~~ next direction will be south
+
+Webby Corridor
+You can see a gelatinous cube here.
+
+Exits: south or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2666"></child>
+        </children>
+    </item>
+    <item nodeId="node-2666">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Chamber of Lights
+Cardinal directions: north, south, east, west and down
+removing north because you just came from there 
+~~~~ next direction will be east
+
+Jewelled Forest
+Exits: north or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2667"></child>
+        </children>
+    </item>
+    <item nodeId="node-2667">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
+Cardinal directions: north, south, east, west and down
+removing west because you just came from there 
+~~~~ next direction will be south
+
+Chamber of Lights
+You can see a cave snake here.
+
+Exits: south or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2668"></child>
+        </children>
+    </item>
+    <item nodeId="node-2668">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2669"></child>
+        </children>
+    </item>
+    <item nodeId="node-2669">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Disturbing Hallway
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2238">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2429"></child>
+            <child nodeId="node-2425"></child>
+            <child nodeId="node-2245"></child>
+        </children>
+    </item>
+    <item nodeId="node-2245">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Marble Halls
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2425">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2426"></child>
+        </children>
+    </item>
+    <item nodeId="node-2426">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2429">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go  from here.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2440">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go west (Rockslide Cavern) from here.
+
+Exits: west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2517"></child>
+            <child nodeId="node-2529"></child>
+            <child nodeId="node-2579"></child>
+        </children>
+    </item>
+    <item nodeId="node-2579">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+~~~~ next direction will be down
+
+Rockslide Cavern
+You can see a giant bat here.
+
+Exits: east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2580"></child>
+        </children>
+    </item>
+    <item nodeId="node-2580">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go east (Dungeon Entrance) or down (Lake of Tears) from here.
+
+Exits: east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2581"></child>
+        </children>
+    </item>
+    <item nodeId="node-2581">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+~~~~ next direction will be north
+
+Lake of Tears
+You can see a kobold here.
+
+Exits: north or south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2582"></child>
+        </children>
+    </item>
+    <item nodeId="node-2582">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Lake of Tears) or south (Lake of Tears) or up (Rockslide Cavern) from here.
+
+Exits: north or south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2583"></child>
+        </children>
+    </item>
+    <item nodeId="node-2583">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Lake of Tears - room
+    kobold - creature
+    yourself - person
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2529">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Lake of Tears
+south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2517">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+south (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2518"></child>
+        </children>
+    </item>
+    <item nodeId="node-2518">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Exits are: north (Dungeon Entrance)
+next room will be Disturbing Hallway
+next direction will be down
+
+Disturbing Hallway
+north (Dungeon Entrance) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2519"></child>
+        </children>
+    </item>
+    <item nodeId="node-2519">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Dungeon Entrance) or up (Disturbing Hallway) or down (Disturbing Hallway) from here.
+
+north (Dungeon Entrance) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2520"></child>
+        </children>
+    </item>
+    <item nodeId="node-2520">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: north (Dungeon Entrance) or up (Disturbing Hallway) or down (Disturbing Hallway)
+next room will be Marble Halls
+next direction will be north
+
+Disturbing Hallway
+north (Marble Halls) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2521"></child>
+        </children>
+    </item>
+    <item nodeId="node-2521">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits are: north (Marble Halls) or up (Disturbing Hallway) or down (Disturbing Hallway)
+next room will be Waterfall Pool
+next direction will be east
+
+Disturbing Hallway
+north (Marble Halls) or east (Waterfall Pool) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2522"></child>
+        </children>
+    </item>
+    <item nodeId="node-2522">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Disturbing Hallway
+north (Marble Halls) or east (Waterfall Pool) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2523"></child>
+        </children>
+    </item>
+    <item nodeId="node-2523">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Marble Halls) or east (Waterfall Pool) or up (Disturbing Hallway) or down (Disturbing Hallway) from here.
+
+north (Marble Halls) or east (Waterfall Pool) or up (Disturbing Hallway) or down (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2434">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+available directions: north, south, east, west and down
+removing west because you just came from there 
+available directions: north, south, east and down
+~~~~ next direction will be north
+
+Marble Halls
+You can see a giant bat here.
+
+Exits: north (Lake of Tears) or west (Dungeon Entrance)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2627"></child>
+            <child nodeId="node-2640"></child>
+            <child nodeId="node-2681"></child>
+            <child nodeId="node-2510"></child>
+            <child nodeId="node-2488"></child>
+        </children>
+    </item>
+    <item nodeId="node-2488">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">Exits are: down (Waterfall Pool)
+next room will be Webby Corridor
+next direction will be northeast
+
+Marble Halls
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2489"></child>
+        </children>
+    </item>
+    <item nodeId="node-2489">
+        <command xml:space="preserve">ne</command>
+        <result xml:space="preserve">Exits are: southwest (Marble Halls)
+next room will be Lake of Tears
+next direction will be up
+
+Webby Corridor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2490"></child>
+        </children>
+    </item>
+    <item nodeId="node-2490">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">Exits are: down (Webby Corridor)
+next room will be Disturbing Hallway
+next direction will be east
+
+Lake of Tears
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2491"></child>
+        </children>
+    </item>
+    <item nodeId="node-2491">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">Exits are: west (Lake of Tears)
+next room will be Disturbing Hallway
+next direction will be southeast
+
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2492"></child>
+        </children>
+    </item>
+    <item nodeId="node-2492">
+        <command xml:space="preserve">se</command>
+        <result xml:space="preserve">Exits are: northwest (Disturbing Hallway) or southeast (Disturbing Hallway) or west (Lake of Tears)
+next room will be Chamber of Lights
+next direction will be northwest
+
+Disturbing Hallway
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2493"></child>
+        </children>
+    </item>
+    <item nodeId="node-2493">
+        <command xml:space="preserve">nw</command>
+        <result xml:space="preserve">Exits are: southeast (Disturbing Hallway)
+next room will be Chamber of Lights
+next direction will be south
+
+Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2494"></child>
+        </children>
+    </item>
+    <item nodeId="node-2494">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Exits are: north (Chamber of Lights) or south (Chamber of Lights) or southeast (Disturbing Hallway)
+next room will be nothing
+next direction will be southwest
+
+[** Programming error: tried to find the "." of (something) **]
+
+[** Programming error: tried to find the "." of (something) **]
+
+Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2510">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Chamber of Lights, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern and Uncanny Lair.
+Unpicked: Webby Corridor, Chamber of Lights, Disturbing Hallway, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern and Uncanny Lair.
+~~~~ next room will be Webby Corridor
+~~~~ next direction will be north
+
+Waterfall Pool
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2511"></child>
+            <child nodeId="node-2597"></child>
+        </children>
+    </item>
+    <item nodeId="node-2597">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Webby Corridor) from here.
+
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2511">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">Exits are: west (Marble Halls)
+next room will be Webby Corridor
+next direction will be up
+
+Chamber of Lights
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2512"></child>
+        </children>
+    </item>
+    <item nodeId="node-2512">
+        <command xml:space="preserve">up</command>
+        <result xml:space="preserve">Exits are: down (Chamber of Lights)
+next room will be Disturbing Hallway
+next direction will be up
+
+Webby Corridor
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2681">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Lake of Tears
+Exits: north (Den of Darkness) or south (Marble Halls)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2682"></child>
+        </children>
+    </item>
+    <item nodeId="node-2682">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Den of Darkness
+You can see a spider here.
+
+Exits: north (Disturbing Hallway) or south (Lake of Tears)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2683"></child>
+        </children>
+    </item>
+    <item nodeId="node-2683">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Waterfall Pool
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Disturbing Hallway
+Exits: north (Waterfall Pool) or south (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2684"></child>
+        </children>
+    </item>
+    <item nodeId="node-2684">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Uncanny Lair
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be down
+
+Waterfall Pool
+You can see a cave snake here.
+
+Exits: south (Disturbing Hallway) or down (Uncanny Lair)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2685"></child>
+        </children>
+    </item>
+    <item nodeId="node-2685">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Webby Corridor
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be north
+
+Uncanny Lair
+You can see a kobold here.
+
+Exits: north (Webby Corridor) or up (Waterfall Pool)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2686"></child>
+        </children>
+    </item>
+    <item nodeId="node-2686">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Chamber of Lights
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Webby Corridor
+You can see a gelatinous cube here.
+
+Exits: north (Chamber of Lights) or south (Uncanny Lair)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2687"></child>
+        </children>
+    </item>
+    <item nodeId="node-2687">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Rockslide Cavern
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Chamber of Lights
+Exits: north (Rockslide Cavern) or south (Webby Corridor)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2688"></child>
+        </children>
+    </item>
+    <item nodeId="node-2688">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Jewelled Forest
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be down
+
+Rockslide Cavern
+Exits: south (Chamber of Lights) or down (Jewelled Forest)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2689"></child>
+        </children>
+    </item>
+    <item nodeId="node-2689">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Exits: up (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2690"></child>
+        </children>
+    </item>
+    <item nodeId="node-2690">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go up (Rockslide Cavern) from here.
+
+Exits: up (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2640">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Chamber of Lights) or west (Dungeon Entrance) from here.
+
+Exits: north or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2641"></child>
+        </children>
+    </item>
+    <item nodeId="node-2641">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Jewelled Forest
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+Available directions: north, east, west and down
+~~~~ next direction will be south
+
+Chamber of Lights
+Exits: south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2627">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Chamber of Lights
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be west
+
+Marble Halls
+You can see a giant bat here.
+
+Exits: west or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2628"></child>
+            <child nodeId="node-2678"></child>
+        </children>
+    </item>
+    <item nodeId="node-2678">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go west (Chamber of Lights) or up (Rockslide Cavern) from here.
+
+Exits: west or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2628">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+~~~~ next direction will be south
+
+Jewelled Forest
+Exits: south or up
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2629"></child>
+        </children>
+    </item>
+    <item nodeId="node-2629">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Lake of Tears
+Cardinal directions: north, south, east, west and down
+Available directions: south, east, west and down
+~~~~ next direction will be south
+
+Den of Darkness
+You can see a gelatinous cube here.
+
+Exits: north or south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2630"></child>
+        </children>
+    </item>
+    <item nodeId="node-2630">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">~~~~ next room will be Disturbing Hallway
+Cardinal directions: north, south, east, west and down
+Available directions: south, east, west and down
+~~~~ next direction will be north
+
+Lake of Tears
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2631"></child>
+        </children>
+    </item>
+    <item nodeId="node-2631">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Disturbing Hallway) from here.
+
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2632"></child>
+        </children>
+    </item>
+    <item nodeId="node-2632">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You can't go that way.
+
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2633"></child>
+        </children>
+    </item>
+    <item nodeId="node-2633">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Uncanny Lair
+Cardinal directions: north, south, east, west and down
+Available directions: north, east, west and down
+~~~~ next direction will be east
+
+Disturbing Hallway
+You can see a giant bat here.
+
+Exits: south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2634"></child>
+        </children>
+    </item>
+    <item nodeId="node-2634">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Waterfall Pool
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east and down
+~~~~ next direction will be north
+
+Uncanny Lair
+Exits: north or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2635"></child>
+        </children>
+    </item>
+    <item nodeId="node-2635">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Webby Corridor
+Cardinal directions: north, south, east, west and down
+Available directions: north, east, west and down
+~~~~ next direction will be east
+
+Waterfall Pool
+Exits: south or east
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2636"></child>
+        </children>
+    </item>
+    <item nodeId="node-2636">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">~~~~ next room will be Rockslide Cavern
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east and down
+~~~~ next direction will be north
+
+Webby Corridor
+Exits: north or west
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2637"></child>
+        </children>
+    </item>
+    <item nodeId="node-2637">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be nothing
+Cardinal directions: north, south, east, west and down
+Available directions: north, east, west and down
+~~~~ next direction will be west
+
+[** Programming error: tried to find the "." of (something) **]
+
+[** Programming error: tried to find the "." of (something) **]
+
+Rockslide Cavern
+Exits: south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2233">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Marble Halls
+White flowstone gleams in thick curtains on the walls of this magnificent hall.
+
+Exits: south (Jewelled Forest) or up (Dungeon Entrance)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2715"></child>
+            <child nodeId="node-2567"></child>
+            <child nodeId="node-2236"></child>
+            <child nodeId="node-2590"></child>
+            <child nodeId="node-2693"></child>
+        </children>
+    </item>
+    <item nodeId="node-2693">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Chamber of Lights, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern and Den of Darkness.
+Unpicked: Webby Corridor, Chamber of Lights, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+~~~~ next room will be Chamber of Lights
+available directions: north, south, east, west and down
+removing east because you just came from there 
+available directions: north, south, west and down
+~~~~ next direction will be down
+
+Rockslide Cavern
+You can see a kobold here.
+
+Exits: east (Uncanny Lair) or down (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2694"></child>
+        </children>
+    </item>
+    <item nodeId="node-2694">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Chamber of Lights, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+Unpicked: Webby Corridor, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+~~~~ next room will be Webby Corridor
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be north
+
+Chamber of Lights
+You can see a giant bat here.
+
+Exits: north (Webby Corridor) or up (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2695"></child>
+        </children>
+    </item>
+    <item nodeId="node-2695">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+Unpicked: Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+~~~~ next room will be Waterfall Pool
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be west
+
+Webby Corridor
+Exits: south (Chamber of Lights) or west (Waterfall Pool)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2696"></child>
+        </children>
+    </item>
+    <item nodeId="node-2696">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+Unpicked: Disturbing Hallway, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+~~~~ next room will be Jewelled Forest
+available directions: north, south, east, west and down
+removing east because you just came from there 
+available directions: north, south, west and down
+~~~~ next direction will be north
+
+Waterfall Pool
+You can see a cave snake here.
+
+Exits: north (Jewelled Forest) or east (Webby Corridor)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2697"></child>
+        </children>
+    </item>
+    <item nodeId="node-2697">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway, Marble Halls, Lake of Tears, Jewelled Forest and Den of Darkness.
+Unpicked: Disturbing Hallway, Marble Halls, Lake of Tears and Den of Darkness.
+~~~~ next room will be Lake of Tears
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be down
+
+Jewelled Forest
+You can see a gelatinous cube here.
+
+Exits: south (Waterfall Pool) or down (Lake of Tears)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2698"></child>
+        </children>
+    </item>
+    <item nodeId="node-2698">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway, Marble Halls, Lake of Tears and Den of Darkness.
+Unpicked: Disturbing Hallway, Marble Halls and Den of Darkness.
+~~~~ next room will be Marble Halls
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be north
+
+Lake of Tears
+Exits: north (Marble Halls) or up (Jewelled Forest)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2699"></child>
+        </children>
+    </item>
+    <item nodeId="node-2699">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway, Marble Halls and Den of Darkness.
+Unpicked: Disturbing Hallway and Den of Darkness.
+~~~~ next room will be Den of Darkness
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be north
+
+Marble Halls
+Exits: north (Den of Darkness) or south (Lake of Tears)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2700"></child>
+        </children>
+    </item>
+    <item nodeId="node-2700">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway and Den of Darkness.
+Unpicked: Disturbing Hallway.
+~~~~ next room will be Disturbing Hallway
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be west
+
+Den of Darkness
+Exits: south (Marble Halls) or west (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2701"></child>
+        </children>
+    </item>
+    <item nodeId="node-2701">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway.
+Unpicked: nothing.
+
+Exits: east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2702"></child>
+        </children>
+    </item>
+    <item nodeId="node-2702">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go east (Den of Darkness) from here.
+
+Exits: east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2703"></child>
+        </children>
+    </item>
+    <item nodeId="node-2703">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">You can't go that way.
+
+Exits: east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2704"></child>
+        </children>
+    </item>
+    <item nodeId="node-2704">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway.
+Unpicked: nothing.
+
+Exits: south (Marble Halls) or west (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2705"></child>
+        </children>
+    </item>
+    <item nodeId="node-2705">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Den of Darkness
+Exits: south (Marble Halls) or west (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2711"></child>
+        </children>
+    </item>
+    <item nodeId="node-2711">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Disturbing Hallway.
+Unpicked: nothing.
+
+Exits: east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2712"></child>
+        </children>
+    </item>
+    <item nodeId="node-2712">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Disturbing Hallway
+Exits: east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2590">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Jewelled Forest
+Exits: north (Marble Halls) or west (Evil Archives)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2673"></child>
+            <child nodeId="node-2591"></child>
+        </children>
+    </item>
+    <item nodeId="node-2591">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">
+Evil Archives
+Exits: east (Jewelled Forest) or down (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2751"></child>
+            <child nodeId="node-2592"></child>
+        </children>
+    </item>
+    <item nodeId="node-2592">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Chamber of Lights, Waterfall Pool, Marble Halls, Lake of Tears, Rockslide Cavern and Den of Darkness.
+Unpicked: Webby Corridor, Chamber of Lights, Waterfall Pool, Marble Halls, Lake of Tears, Rockslide Cavern and Den of Darkness.
+~~~~ next room will be Chamber of Lights
+~~~~ next direction will be east
+
+Magnificent ruins
+Crumbling stone, trees growing from crevices in the walls, and a narrow staircase leading down into darkness.
+
+You can see a cave snake here.
+
+Exits: north or east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2593"></child>
+        </children>
+    </item>
+    <item nodeId="node-2593">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">You can go north (Jewelled Forest) or east (Chamber of Lights) or down (Dungeon Entrance) from here.
+
+Exits: north or east or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2751">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Chamber of Lights
+An uncanny mottled glow emanates from the walls of this high-ceilinged cavern.
+
+You can see an iridium bat here.
+
+Exits: up (Evil Archives) or down (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2752"></child>
+        </children>
+    </item>
+    <item nodeId="node-2752">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Rockslide Cavern
+Exits: south (Lake of Tears) or up (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2753"></child>
+        </children>
+    </item>
+    <item nodeId="node-2753">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">You have reached a dead end.
+Something stirs in the darkness.
+
+Exits: north (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2754"></child>
+        </children>
+    </item>
+    <item nodeId="node-2754">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Lake of Tears
+You can see a sleeping dragon here.
+
+Exits: north (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2673">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+removing south because you just came from there 
+~~~~ next direction will be down
+
+Chamber of Lights
+Exits: south or up or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2236">
+        <command xml:space="preserve">l</command>
+        <result xml:space="preserve">Dungeon Entrance
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2567">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2715">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Webby Corridor, Chamber of Lights, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+Unpicked: Chamber of Lights, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+~~~~ next room will be Marble Halls
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be south
+
+Webby Corridor
+You can see a gelatinous cube here.
+
+Exits: south (Marble Halls) or up (Disturbing Hallway)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2716"></child>
+        </children>
+    </item>
+    <item nodeId="node-2716">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Waterfall Pool, Marble Halls, Lake of Tears, Jewelled Forest, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+Unpicked: Chamber of Lights, Waterfall Pool, Lake of Tears, Jewelled Forest, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+~~~~ next room will be Jewelled Forest
+available directions: north, south, east, west and down
+removing north because you just came from there 
+available directions: south, east, west and down
+~~~~ next direction will be west
+
+Marble Halls
+You can see a spider here.
+
+Exits: north (Webby Corridor) or west (Jewelled Forest)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2717"></child>
+        </children>
+    </item>
+    <item nodeId="node-2717">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Waterfall Pool, Lake of Tears, Jewelled Forest, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+Unpicked: Chamber of Lights, Waterfall Pool, Lake of Tears, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+~~~~ next room will be Den of Darkness
+available directions: north, south, east, west and down
+removing east because you just came from there 
+available directions: north, south, west and down
+~~~~ next direction will be north
+
+Jewelled Forest
+You can see a giant bat here.
+
+Exits: north (Den of Darkness) or east (Marble Halls)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2718"></child>
+        </children>
+    </item>
+    <item nodeId="node-2718">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Waterfall Pool, Lake of Tears, Rockslide Cavern, Uncanny Lair and Den of Darkness.
+Unpicked: Chamber of Lights, Waterfall Pool, Lake of Tears, Rockslide Cavern and Uncanny Lair.
+~~~~ next room will be Waterfall Pool
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be west
+
+Den of Darkness
+Exits: south (Jewelled Forest) or west (Waterfall Pool)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2719"></child>
+        </children>
+    </item>
+    <item nodeId="node-2719">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Waterfall Pool, Lake of Tears, Rockslide Cavern and Uncanny Lair.
+Unpicked: Chamber of Lights, Lake of Tears, Rockslide Cavern and Uncanny Lair.
+~~~~ next room will be Uncanny Lair
+available directions: north, south, east, west and down
+removing east because you just came from there 
+available directions: north, south, west and down
+~~~~ next direction will be north
+
+Waterfall Pool
+Exits: north (Uncanny Lair) or east (Den of Darkness)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2720"></child>
+        </children>
+    </item>
+    <item nodeId="node-2720">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Lake of Tears, Rockslide Cavern and Uncanny Lair.
+Unpicked: Chamber of Lights, Lake of Tears and Rockslide Cavern.
+~~~~ next room will be Lake of Tears
+available directions: north, south, east, west and down
+removing south because you just came from there 
+available directions: north, east, west and down
+~~~~ next direction will be down
+
+Uncanny Lair
+Exits: south (Waterfall Pool) or down (Lake of Tears)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2721"></child>
+        </children>
+    </item>
+    <item nodeId="node-2721">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights, Lake of Tears and Rockslide Cavern.
+Unpicked: Chamber of Lights and Rockslide Cavern.
+~~~~ next room will be Rockslide Cavern
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be down
+
+Lake of Tears
+Exits: up (Uncanny Lair) or down (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2722"></child>
+        </children>
+    </item>
+    <item nodeId="node-2722">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights and Rockslide Cavern.
+Unpicked: Chamber of Lights.
+~~~~ next room will be Chamber of Lights
+available directions: north, south, east, west and down
+available directions: north, south, east, west and down
+~~~~ next direction will be down
+
+Rockslide Cavern
+Exits: up (Lake of Tears) or down (Chamber of Lights)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2723"></child>
+        </children>
+    </item>
+    <item nodeId="node-2723">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">Unvisted: Chamber of Lights.
+Unpicked: nothing.
+You have reached a dead end.
+
+Exits: up (Rockslide Cavern)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2222">
+        <command xml:space="preserve">actions</command>
+        <result xml:space="preserve">Actions listing on.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2223"></child>
+            <child nodeId="node-2475"></child>
+        </children>
+    </item>
+    <item nodeId="node-2475">
+        <command xml:space="preserve">showme</command>
+        <result xml:space="preserve">Magnificent ruins - room
+    yourself - person
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2607"></child>
+            <child nodeId="node-2476"></child>
+        </children>
+    </item>
+    <item nodeId="node-2476">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">[listing exits]
+You can go  from here.
+[listing exits - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2607">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+The walls rumble. You can't see the sky anymore!
+The exit from the dungeon has mysteriously closed.
+
+~~~~ next room will be Den of Darkness
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+exit list: 
+~~~~ next direction will be north
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+You can see a spider here.
+
+[going down - succeeded]
+
+Exits: north
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2608"></child>
+        </children>
+    </item>
+    <item nodeId="node-2608">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">[going north]
+~~~~ next room will be Webby Corridor
+Cardinal directions: north, south, east, west and down
+Available directions: north, south, east, west and down
+exit list: south (Dungeon Entrance)
+~~~~ next direction will be south
+
+Den of Darkness
+You can see a giant bat here.
+
+[going north - succeeded]
+
+Exits: south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2223">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">[going down]
+
+Dungeon Entrance
+[going down - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2228"></child>
+        </children>
+    </item>
+    <item nodeId="node-2228">
+        <command xml:space="preserve">exits</command>
+        <result xml:space="preserve">[listing exits]
+You can go up (Magnificent ruins) from here.
+
+[listing exits - succeeded]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+</Skein>
