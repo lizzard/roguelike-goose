@@ -38,7 +38,7 @@ After going to a room:
 				let reverse be the opposite of the way;
 				change the reverse exit of nextroom to the location of the player;
 				[put in a creature!]
-				if a random chance of 3 in 10 succeeds:
+				if a random chance of 5 in 10 succeeds:
 					unless Table of Mobs is empty:
 						choose a random row from the Table of Mobs;
 						now creature entry is in the location of the player;
@@ -93,14 +93,20 @@ Part 2 - Our friend Goose
 
 The description of yourself is "You crane your long, graceful neck to look back. [line break]White, muscular, hefty, feathered. [line break]Yes, you're still a fabulous goose!" 
 
-[Implement peck, honk, flap]
+[Stats: Strength, Ferocity, Cunning]
 
-The max hp of the player is 10. The current hp of the player is 10. The str of the player is 3. 
+[HP, damage, healing systems]
+
+The max hp of the player is 10. The current hp of the player is 10. The str of the player is 3.  The fer of the player is 2.
+
+Listing stats is an action applying to nothing. 
+Understand "stats" as listing stats. 
+
+Carry out listing stats:
+	say "Strength: [str of the player]   Ferocity: [fer of the player] [paragraph break]";
 
 
-
-
-[TODO: implement swimming]
+[implement swimming]
 
 A person can be floating, buoyant, walking, or hopping. A person is usually walking.
 
@@ -118,19 +124,55 @@ Instead of swimming:
 			stop the action.
 		
 
-	
+[Implement peck, honk, flap]
+			
+Honking is an action applying to nothing. Understand "honk" as honking. 
+
+Carry out honking:
+	if the player carries nothing:
+		say "HONK!!!!";
+	if the player carries something:
+		say "HMMMMMNNNNK!!!";
+		say "You suddenly remember that your beak is full of stuff.";
+			
+After honking:
+	if more than one person is in the location of the player:
+		say "[one of]Startled, a denizen of the dungeon looks up in alarm.[or]A creature nearby jumps in fear.[or]Creatures in the room freeze, scanning for trouble.[then purely at random]";
+	otherwise:
+		say "[one of]A shower of dust cascades from above.[or]Echoes reverberate through the darkness.[then purely at random]".
+
+			
+Flapping is an action applying to nothing. Understand "flap" as flapping. 
+
+After flapping:
+	if more than one person is in the location of the player:
+		say "[one of]Everyone in the cave starts in surprise.[or]One of your powerful wings clubs a scurrying creature in the elbow.[or]Shadowy crawlers leap away from the chaotic hurricane of your wings.[or]Your flurry of wings makes the creature step back in dismay.[then purely at random]";
+		
+Carry out flapping:
+		say "You flap your wings, menacing everything in the near vicinity.";
+
+
+Pecking is an action applying to one thing. Understand "peck [something]" as pecking. Understand "bite [something]" as pecking.
+		
+Check pecking:
+	if the noun is a person:
+		try attacking the noun instead;
+		
+Carry out pecking:
+	say "You jab your beak at [the noun].";
+
+
 
 
 [Classes: Rogue, Witch, Warrior, Bard]
 
-[Stats: Strength, Ferocity, Tenacity, Moxie, Speed]
 
-[HP, damage, healing systems]
 
 
 Part 3 - Combat system
 
-A person has a number called max hp. A person has a number called current hp. A person has a number called str. 
+A person has a number called max hp. A person has a number called current hp. A person has a number called str. A person has a number called fer. 
+
 
 
 [combat]
@@ -138,22 +180,28 @@ A person has a number called max hp. A person has a number called current hp. A 
 The block attacking rule is not listed in the check attacking rulebook.
 
 Carry out attacking someone:
-	let the damage be a random number between the str of the player and 4;
-	say "You attack [the noun], causing [damage] points of damage!";
-	decrease the current hp of the noun by the damage;
-	if the current hp of the noun is less than 0:
-		say "[line break][The noun] falls over, gasping in pain. It drags itself off into the darkness.";
-		now the noun is nowhere;
-		stop the action;
-	let the enemy damage be a random number between the str of the noun and 15;
-	say "[line break][The noun] attacks you, causing [enemy damage] points of damage!";
-	decrease the current hp of the player by the enemy damage;
-	if the current hp of the player is less than 0:
-		say "[line break]You swoon.";
-		say "The world shimmers and whirls.";
-		say "You wake up nestled into a hollow of warm sand.";
-		now the player is in Shorehaven;
-		continue the action;
+	repeat with attacks running from 1 to the fer of the player:
+		let the damage be a random number between the str of the player and the max hp of the player;
+		say "You attack [the noun], causing [damage] points of damage!";
+		decrease the current hp of the noun by the damage;
+		if the current hp of the noun is less than 0:
+			say "[line break][The noun] falls over, gasping in pain. It drags itself off into the darkness.";
+			now the noun is nowhere;
+			stop the action;
+	say "[line break]";
+	repeat with attacks running from 1 to the fer of the noun:
+		let the maxdam be the str of the noun plus 2;
+		let the enemy damage be a random number between the str of the noun and the maxdam;
+		say "[The noun] attacks you, causing [enemy damage] points of damage!";
+		decrease the current hp of the player by the enemy damage;
+		if the current hp of the player is less than 0:
+			say "[line break]You swoon.";
+			say "The world shimmers and whirls.";
+			say "You wake up nestled into a hollow of warm sand.";
+			say "You feel completely healed after your nap.";
+			now the current hp of the player is the max hp of the player;
+			now the player is in Shorehaven;
+			continue the action;
 
 [magic]
 
@@ -219,7 +267,7 @@ Vault of Vastness is a room. The description is "Soaring arches overhead, stone 
 
 Glittering Shrine is a room. The description is "Flecks of shining mica gleam from granite walls."
 
-An obsidian altar is an object in Glittering Shrine. It is a supporter. It is fixed in place. The description is "A slab of black glass forms an altar along one wall."
+An obsidian altar is an object in Glittering Shrine. The altar is a supporter. It is fixed in place. The description is "A slab of black glass forms an altar along one wall."
 
 Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
 
@@ -249,25 +297,31 @@ To assign hp:
 		now the max hp of the creature entry is max hp entry;
 		now the current hp of the creature entry is current hp entry;
 		now the str of the creature entry is str entry;
+		now the fer of the creature entry is fer entry;
 
 A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The str of a sleeping dragon is 3.
 
 A giant rat is a creature. It is in Dungeon Entrance.
-The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1.
+The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1. The fer of a giant rat is 1.
 
 Table of Mobs
-creature	max hp	current hp	str
-spider	3	3	1
-kobold	5	5	1
-gelatinous cube	10	10	3
-cave snake	8	8	2
-iridium bat	12	12	3
-glowering elf	15	15	3
-tentacled horror	15	15	4
-soot sprite	4	4	1
-lumbering mummy	6	6	2
-confused adventurer	10	10	2
-wispy ghost	9	9	2
+creature	max hp	current hp	str	fer
+spider	6	6	1	1
+kobold	8	8	1	1
+gelatinous cube	12	12	3	1
+cave snake	10	10	2	1
+iridium bat	15	15	3	1
+glowering elf	20	20	3	2
+tentacled horror	25	25	4	2
+soot sprite	8	8	1	1
+lumbering mummy	10	10	2	1
+confused adventurer	15	15	2	1
+wispy ghost	12	12	2	1
+
+
+
+
+
 
 Part 6 - Objects
 
