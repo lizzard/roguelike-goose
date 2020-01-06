@@ -1,15 +1,20 @@
 "Roguelike Goose" by lizzard
 
 
-Part 1 - Some rules
+Part 1 - Some rules for mapping
 
 Section 1 - Valid directions
 
 A direction is either available or not available. A direction is usually not available. North is available. South is available. East is available. West is available. Down is available.
 
+Definition: a direction (called thataway) is viable if the room 
+  thataway from the location is a room.
+
 Section 2 - Create the map dynamically
 
 A room can be picked or unpicked. A room is usually unpicked.
+
+Mysterious ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
 After going to a room:
 	if the player is buoyant:
@@ -51,9 +56,11 @@ After going to a room:
 				now Down is available;
 				continue the action;
 			otherwise:
-				say "You have reached a dead end.";
-				now a sleeping dragon is in the location of the player;
-				say "Something stirs in the darkness.";
+				if the number of viable directions is less than 2:
+					say "You have reached a dead end.";
+					now a sleeping dragon is in the location of the player;
+					say "Something stirs in the darkness.";
+						
 
 Section 3 - Exit related stuff
 
@@ -90,12 +97,12 @@ To say exit list:
 
 Part 2 - Our friend Goose
 
+Section 1 - Stats
 
 The description of yourself is "You crane your long, graceful neck to look back. [line break]White, muscular, hefty, feathered. [line break]Yes, you're still a fabulous goose!" 
 
-[Stats: Strength, Ferocity, Cunning]
 
-[HP, damage, healing systems]
+[Stats: Strength, Ferocity, Cunning]
 
 The max hp of the player is 10. The current hp of the player is 10. The str of the player is 3.  The fer of the player is 2.
 
@@ -103,13 +110,12 @@ Listing stats is an action applying to nothing.
 Understand "stats" as listing stats. 
 
 Carry out listing stats:
-	say "Strength: [str of the player]   Ferocity: [fer of the player] [paragraph break]";
+	say "Strength: [str of the player]   Ferocity: [fer of the player]   HP: [current hp of the player]/[max hp of the player] [paragraph break]";
 
 
-[implement swimming]
+Section 2 - Things a goose can do
 
 A person can be floating, buoyant, walking, or hopping. A person is usually walking.
-
 
 Understand "swim" as swimming. Swimming is an action applying to nothing.
 
@@ -123,6 +129,7 @@ Instead of swimming:
 			say "You notice a little beach to the west.";
 			stop the action.
 		
+[maybe implement fly or levitate from potions]
 
 [Implement peck, honk, flap]
 			
@@ -164,15 +171,47 @@ Carry out pecking:
 
 
 
+
 [Classes: Rogue, Witch, Warrior, Bard]
 
 
+Part 3 - Wearing and wielding
+
+Listing equipment is an action applying to nothing.
+
+Understand "equipment", "equip" or "eq" as listing equipment. 
+
+Carry out listing equipment:
+	say "You are wearing: [line break]";
+	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
+	
+Instead of taking inventory: 
+	if the number of things enclosed by the player is 0, say "You are empty-beaked." instead; 
+	if the player carries something: 
+		now all things enclosed by the player are unmarked for listing; 
+		now all things carried by the player are marked for listing; 
+		say "You are carrying: [line break]"; 
+		list the contents of the player, with newlines, indented, giving inventory information, including contents, with extra indentation, listing marked items only; 
+	if the player wears something: 
+		now all things enclosed by the player are unmarked for listing; 
+		now all things worn by the player are marked for listing; 
+		say "You are wearing: [line break]"; 
+		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.
 
 
-Part 3 - Combat system
+
+Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. 
+
+Headgear is a kind of equipment.  The slot of headgear is "head".
+Neckwear is a kind of equipment. The slot of neckwear is "neck".
+
+A diamond tiara is headgear. It is in Dungeon Entrance. 
+
+An AirDnD lanyard is neckwear. It is in Dungeon Entrance. 
+
+Part 4 - Combat system
 
 A person has a number called max hp. A person has a number called current hp. A person has a number called str. A person has a number called fer. 
-
 
 
 [combat]
@@ -182,10 +221,13 @@ The block attacking rule is not listed in the check attacking rulebook.
 Carry out attacking someone:
 	repeat with attacks running from 1 to the fer of the player:
 		let the damage be a random number between the str of the player and the max hp of the player;
-		say "You attack [the noun], causing [damage] points of damage!";
+		say "You viciously peck [the noun], causing [damage] points of damage!";
 		decrease the current hp of the noun by the damage;
 		if the current hp of the noun is less than 0:
-			say "[line break][The noun] falls over, gasping in pain. It drags itself off into the darkness.";
+			say "[line break][The noun] [one of]falls over, gasping in pain.[or]trips and falls.[or]leaps back in shock.[purely at random]";
+			choose a random row from the Table of Complaints;
+			say "'[plaint entry]'[one of] it yells.[or] it whines, cringing.[or] it shrieks, scuttling away.[or] it mutters as it turns to run.[or] it mutters.[or] it shrieks.[or] it yelps.[purely at random]";
+			say "[The noun] drags itself off into the darkness.";
 			now the noun is nowhere;
 			stop the action;
 	say "[line break]";
@@ -203,37 +245,85 @@ Carry out attacking someone:
 			now the player is in Shorehaven;
 			continue the action;
 
+[Silly things the mobs say when they are defeated]
+Table of Complaints
+Plaint
+"This isn't how things are supposed to go!"
+"I went to Monster Polytechnic for this?"
+"Scare the adventurers, they said, it's easy, they said,"
+"Level 1 humans only, that's what they promised,"
+"Oooh, that smarts,"
+"Mama always told me never to cross a dungeon picket line,"
+"The dispatcher didn't warn us! This is too much!"
+"What ARE you?"
+"Ow, that's going too far!"
+"Ouch! I'm out of here!"
+"That's it, I quit!"
+
 [magic]
 
 [stats]
 
 
 
-Part 4 - Locations
+Part 5 - NPCs
+
+A creature is a kind of person.  A creature is either working or striking. A creature is usually working.
+
+A spider is a creature. 
+A grumpy kobold is a creature. 
+A gelatinous cube is a creature. 
+A cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, a confused adventurer, and an iridium bat are creatures.
+
+Assigning stats is an action applying to one thing. 
+
+When play begins:
+	assign stats;
+	
+To assign stats:
+	repeat through the Table of Mobs:
+		now the max hp of the creature entry is max hp entry;
+		now the current hp of the creature entry is current hp entry;
+		now the str of the creature entry is str entry;
+		now the fer of the creature entry is fer entry;
+
+A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The str of a sleeping dragon is 3. The fer of a sleeping dragon is 3. 
+
+A giant rat is a creature. It is in Dungeon Entrance.
+The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1. The fer of a giant rat is 1.
+
+Table of Mobs
+creature	max hp	current hp	str	fer
+spider	15	15	1	1
+grumpy kobold	20	20	1	1
+gelatinous cube	25	25	3	1
+cave snake	12	12	2	1
+iridium bat	15	15	3	1
+glowering elf	25	25	3	2
+tentacled horror	30	30	4	2
+soot sprite	8	8	1	1
+lumbering mummy	15	15	2	1
+confused adventurer	25	25	2	1
+wispy ghost	12	12	2	1
 
 
-Magnificent ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
-After going from Magnificent ruins:
+
+
+Part 6 - Locations
+
+
+After going from Mysterious ruins:
 	say "The walls rumble. Rocks fall.[line break]";
 	say "You can't see the sky anymore![line break]";
 	say "There is no way out.";
-	now Magnificent Ruins is mapped up of nowhere;
+	now Mysterious Ruins is mapped up of nowhere;
 	continue the action;
 
-Dungeon Entrance is down from Magnificent Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large bare room."
+Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large bare room."
 
-Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls."
+A trophy case is in Dungeon Entrance. It is a container. It is fixed in place. The description of a trophy case is "An enormous marble trophy case. The front is carved with the motto, 'Vae victis'".
 
-Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern."
-
-Disturbing Hallway is a room. "The angles here, the colors, the feel of the air -- just wrong. Horribly wrong."
-
-Waterfall Cave is a room. "Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath."
-
-A pool is in Waterfall Cave. It is scenery.
-
-Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall."
 
 
 Jewelled Forest is a room. "Marvellous columns march down the length of this immense cavern. Jewel-like lights shine from deep within."
@@ -249,84 +339,73 @@ Before going to the Cavern of the Lake of Tears:
 Shorehaven is west of The Cavern of the Lake of Tears. It is picked. The description is "A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap.";
 [you appear here if you faint in combat, and being here restores your hit points]
 
+Evil Archives is a room. The description is "Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library."
+
+The Librarian's Lair is a room. It is picked. The description is "This is where the librarian lived, ate, slept, and piled their mildew infested spellbooks to the ceiling. It smells horrible."
+
+
+Glittering Shrine is a room. The description is "Flecks of shining mica gleam from granite walls."
+
+An obsidian altar is an object in Glittering Shrine. The altar is a supporter. It is fixed in place. The description is "A slab of black glass forms an altar along one wall. An inscription runs along its rim."
+
+An inscription is scenery in Glittering Shrine. The description is "It says, in shimmering black letters, 'Sphinx of black quartz, judge my vow.'"
+
+Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
+
+
+Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls."
+
+Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern."
+
+Disturbing Hallway is a room. "The angles here, the colors, the feel of the air -- just wrong. Horribly wrong."
+
+Waterfall Cave is a room. "Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath."
+
+A pool is in Waterfall Cave. It is scenery.
+
+Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall."
+
+
+
+
 Rockslide Cavern is a room. The description is "Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them."
 
 Uncanny Lair is a room. The description is "Oddly shaped bones are strewn about this rough cave. Some creature made a nest in one corner out of shredded fungus."
 
 Den of Darkness is a room. The description is "The darkness softens, the room is hushed. It's hard to see your way out."
 
-Evil Archives is a room. The description is "Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library."
 
-The Librarian's Lair is a room. It is picked. The description is "This is where the librarian lived, ate, slept, and piled their mildew infested spellbooks to the ceiling. It smells horrible."
 
 Luminous Gardens is a room. The description is "Mushrooms the size of trees, glowing, are scattered among winding paths. Tiny lightning bugs flit between snow-pale cave blossoms."
 
 Nasty Passage is a room. The description is "A tight squeeze between damp and slimy boulders. There is blood on the ground."
 
-Vault of Vastness is a room. The description is "Soaring arches overhead, stone display cases and cubbyholes in the walls. The treasure hall of a dragon, emptied of its loot." 
-
-Glittering Shrine is a room. The description is "Flecks of shining mica gleam from granite walls."
-
-An obsidian altar is an object in Glittering Shrine. The altar is a supporter. It is fixed in place. The description is "A slab of black glass forms an altar along one wall."
-
-Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
 
 Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead."
 
 The Hall of Time is a room. The description is "A long, narrow hall, flickering with light from magefire sconces. The painted walls show the progression of time through planets and stars, sun and moons."
 
 
+[This can be the final room where everyone meets]
+Vault of Vastness is a room. It is picked. The description is "Soaring arches overhead, stone display cases and cubbyholes in the walls. The treasure hall of a dragon, emptied of its loot." 
 
 
-Part 5 - NPCs
-
-A creature is a kind of person. 
-
-A spider is a creature. 
-A kobold is a creature. 
-A gelatinous cube is a creature. 
-A cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, a confused adventurer, and an iridium bat are creatures.
-
-Assigning hp is an action applying to one thing. 
-
-When play begins:
-	assign hp;
-	
-To assign hp:
-	repeat through the Table of Mobs:
-		now the max hp of the creature entry is max hp entry;
-		now the current hp of the creature entry is current hp entry;
-		now the str of the creature entry is str entry;
-		now the fer of the creature entry is fer entry;
-
-A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The str of a sleeping dragon is 3.
-
-A giant rat is a creature. It is in Dungeon Entrance.
-The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1. The fer of a giant rat is 1.
-
-Table of Mobs
-creature	max hp	current hp	str	fer
-spider	6	6	1	1
-kobold	8	8	1	1
-gelatinous cube	12	12	3	1
-cave snake	10	10	2	1
-iridium bat	15	15	3	1
-glowering elf	20	20	3	2
-tentacled horror	25	25	4	2
-soot sprite	8	8	1	1
-lumbering mummy	10	10	2	1
-confused adventurer	15	15	2	1
-wispy ghost	12	12	2	1
+Part 7 - Objects
 
 
 
 
 
+[Table of Equipment]
 
-Part 6 - Objects
+
 
 [TODO: Implement potions]
 [TODO: Implement wearables]
 [TODO: Implement wieldable weapons]
 
+
+Part 8 - Score
+
+[add in a score for creatures striking]
 

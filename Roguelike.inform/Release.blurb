@@ -20,7 +20,7 @@ picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover
 
 placeholder [IFID] = "5C77C549-2202-4BFB-B5EC-157B2DB3EA2F"
 placeholder [RELEASE] = "1"
-placeholder [YEAR] = "2019"
+placeholder [YEAR] = "2020"
 placeholder [TITLE] = "Roguelike Goose"
 placeholder [AUTHOR] = "lizzard"
 placeholder [BLURB] = "A work of interactive fiction."
