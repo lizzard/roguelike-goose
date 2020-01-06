@@ -104,13 +104,13 @@ The description of yourself is "You crane your long, graceful neck to look back.
 
 [Stats: Strength, Ferocity, Cunning]
 
-The max hp of the player is 10. The current hp of the player is 10. The str of the player is 3.  The fer of the player is 2.
+The max hp of the player is 10. The current hp of the player is 10. The strength of the player is 3.  The ferocity of the player is 2.
 
 Listing stats is an action applying to nothing. 
 Understand "stats" as listing stats. 
 
 Carry out listing stats:
-	say "Strength: [str of the player]   Ferocity: [fer of the player]   HP: [current hp of the player]/[max hp of the player] [paragraph break]";
+	say "Strength: [strength of the player]   Ferocity: [ferocity of the player]   HP: [current hp of the player]/[max hp of the player] [paragraph break]";
 
 
 Section 2 - Things a goose can do
@@ -146,7 +146,7 @@ After honking:
 	if more than one person is in the location of the player:
 		say "[one of]Startled, a denizen of the dungeon looks up in alarm.[or]A creature nearby jumps in fear.[or]Creatures in the room freeze, scanning for trouble.[then purely at random]";
 	otherwise:
-		say "[one of]A shower of dust cascades from above.[or]Echoes reverberate through the darkness.[then purely at random]".
+		say "[one of]A shower of dust cascades from above.[or]Echoes reverberate through the darkness.[or]As ever, the sound of your magnificent honkitude utterly charms you.[then purely at random]".
 
 			
 Flapping is an action applying to nothing. Understand "flap" as flapping. 
@@ -170,6 +170,10 @@ Carry out pecking:
 
 
 
+Instead of sleeping:
+	if the actor is the player:
+		say "You take a quick snooze and wake up again, feeling frisky.";
+		stop the action.
 
 
 [Classes: Rogue, Witch, Warrior, Bard]
@@ -199,7 +203,6 @@ Instead of taking inventory:
 		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.
 
 
-
 Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. 
 
 Headgear is a kind of equipment.  The slot of headgear is "head".
@@ -211,16 +214,15 @@ An AirDnD lanyard is neckwear. It is in Dungeon Entrance.
 
 Part 4 - Combat system
 
-A person has a number called max hp. A person has a number called current hp. A person has a number called str. A person has a number called fer. 
-
+A person has a number called max hp. A person has a number called current hp. A person has a number called strength. A person has a number called ferocity. 
 
 [combat]
 
 The block attacking rule is not listed in the check attacking rulebook.
 
 Carry out attacking someone:
-	repeat with attacks running from 1 to the fer of the player:
-		let the damage be a random number between the str of the player and the max hp of the player;
+	repeat with attacks running from 1 to the ferocity of the player:
+		let the damage be a random number between the strength of the player and the max hp of the player;
 		say "You viciously peck [the noun], causing [damage] points of damage!";
 		decrease the current hp of the noun by the damage;
 		if the current hp of the noun is less than 0:
@@ -231,9 +233,9 @@ Carry out attacking someone:
 			now the noun is nowhere;
 			stop the action;
 	say "[line break]";
-	repeat with attacks running from 1 to the fer of the noun:
-		let the maxdam be the str of the noun plus 2;
-		let the enemy damage be a random number between the str of the noun and the maxdam;
+	repeat with attacks running from 1 to the ferocity of the noun:
+		let the maxdam be the strength of the noun plus 2;
+		let the enemy damage be a random number between the strength of the noun and the maxdam;
 		say "[The noun] attacks you, causing [enemy damage] points of damage!";
 		decrease the current hp of the player by the enemy damage;
 		if the current hp of the player is less than 0:
@@ -284,16 +286,16 @@ To assign stats:
 	repeat through the Table of Mobs:
 		now the max hp of the creature entry is max hp entry;
 		now the current hp of the creature entry is current hp entry;
-		now the str of the creature entry is str entry;
-		now the fer of the creature entry is fer entry;
+		now the strength of the creature entry is strength entry;
+		now the ferocity of the creature entry is ferocity entry;
 
-A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The str of a sleeping dragon is 3. The fer of a sleeping dragon is 3. 
+A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The strength of a sleeping dragon is 3. The ferocity of a sleeping dragon is 3. 
 
 A giant rat is a creature. It is in Dungeon Entrance.
-The max hp of the giant rat is 5. The current hp of the giant rat is 5. The str of a giant rat is 1. The fer of a giant rat is 1.
+The max hp of the giant rat is 5. The current hp of the giant rat is 5. The strength of a giant rat is 1. The ferocity of a giant rat is 1.
 
 Table of Mobs
-creature	max hp	current hp	str	fer
+creature	max hp	current hp	strength	ferocity
 spider	15	15	1	1
 grumpy kobold	20	20	1	1
 gelatinous cube	25	25	3	1
@@ -305,8 +307,6 @@ soot sprite	8	8	1	1
 lumbering mummy	15	15	2	1
 confused adventurer	25	25	2	1
 wispy ghost	12	12	2	1
-
-
 
 
 

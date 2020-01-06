@@ -30,6 +30,7 @@ Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in
             <child nodeId="node-1661"></child>
             <child nodeId="node-1655"></child>
             <child nodeId="node-1651"></child>
+            <child nodeId="node-2351"></child>
             <child nodeId="node-1640"></child>
             <child nodeId="node-1631"></child>
             <child nodeId="node-1627"></child>
@@ -305,6 +306,17 @@ Exits: north (Rockslide Cavern) or up (Uncanny Lair)
         <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 7 
 
 Exits: north (Rockslide Cavern) or up (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2351">
+        <command xml:space="preserve">sleep</command>
+        <result xml:space="preserve">You take a quick snooze and wake up again, feeling frisky.
+
+You aren't feeling especially drowsy.
+
+Exits: down (Dungeon Entrance)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2152,7 +2164,7 @@ Stone walls, mildewed with glowing stuff, widen into a large bare room.
 
 You can see a diamond tiara, an AirDnD lanyard, a giant rat and a trophy case (empty) here.
 
-Exits: north (Waterfall Cave)
+Exits: west (Chamber of Lights)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -3912,14 +3924,13 @@ Exits: south (Vault of Vastness) or east (Jewelled Forest) or west (Shorehaven)
     </item>
     <item nodeId="node-1948">
         <command xml:space="preserve">peck rat</command>
-        <result xml:space="preserve">You viciously peck the giant rat, causing 7 points of damage!
+        <result xml:space="preserve">You viciously peck the giant rat, causing 8 points of damage!
 
-The giant rat trips and falls.
-.
-"This isn't how things are supposed to go!" it mutters.
+The giant rat falls over, gasping in pain.
+"Scare the adventurers, they said, it's easy, they said," it yelps.
 The giant rat drags itself off into the darkness.
 
-Exits: north (Waterfall Cave)
+Exits: west (Chamber of Lights)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -3934,14 +3945,17 @@ Exits: north (Waterfall Cave)
     <item nodeId="node-1949">
         <command xml:space="preserve">w</command>
         <result xml:space="preserve">
-Rockslide Cavern
-Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them.
+Chamber of Lights
+An uncanny mottled glow emanates from the walls of this high-ceilinged cavern.
 
-Exits: south (Webby Corridor) or east (Dungeon Entrance)
+You can see a lumbering mummy here.
+
+Exits: north (Evil Archives) or east (Dungeon Entrance)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1950"></child>
+        <children><child nodeId="node-2344"></child>
+            <child nodeId="node-1950"></child>
         </children>
     </item>
     <item nodeId="node-1950">
@@ -4060,17 +4074,118 @@ Exits: east (Cavern of the Lake of Tears)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
-    <item nodeId="node-1958">
-        <command xml:space="preserve">s</command>
+    <item nodeId="node-2344">
+        <command xml:space="preserve">peck mummy</command>
+        <result xml:space="preserve">You viciously peck the lumbering mummy, causing 4 points of damage!
+You viciously peck the lumbering mummy, causing 5 points of damage!
+
+The lumbering mummy attacks you, causing 4 points of damage!
+
+Exits: north (Evil Archives) or east (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2345"></child>
+        </children>
+    </item>
+    <item nodeId="node-2345">
+        <command xml:space="preserve">peck mummy</command>
+        <result xml:space="preserve">You viciously peck the lumbering mummy, causing 8 points of damage!
+
+The lumbering mummy leaps back in shock.
+"Mama always told me never to cross a dungeon picket line," it mutters.
+The lumbering mummy drags itself off into the darkness.
+
+Exits: north (Evil Archives) or east (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2346"></child>
+        </children>
+    </item>
+    <item nodeId="node-2346">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Evil Archives
+Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library.
+
+Exits: south (Chamber of Lights) or down (Marble Halls)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2347"></child>
+        </children>
+    </item>
+    <item nodeId="node-2347">
+        <command xml:space="preserve">d</command>
         <result xml:space="preserve">
 Marble Halls
 White flowstone gleams in thick curtains on the walls of this magnificent hall.
 
-Exits: north (Dungeon Entrance) or west (Disturbing Hallway)
+You can see a tentacled horror here.
+
+Exits: west (Luminous Gardens) or up (Evil Archives)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1966"></child>
+        <children><child nodeId="node-2348"></child>
+        </children>
+    </item>
+    <item nodeId="node-2348">
+        <command xml:space="preserve">peck horror</command>
+        <result xml:space="preserve">You viciously peck the tentacled horror, causing 6 points of damage!
+You viciously peck the tentacled horror, causing 7 points of damage!
+
+The tentacled horror attacks you, causing 6 points of damage!
+The tentacled horror attacks you, causing 4 points of damage!
+
+You swoon.
+The world shimmers and whirls.
+You wake up nestled into a hollow of warm sand.
+You feel completely healed after your nap.
+
+Shorehaven
+A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap.
+
+Exits: east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2349"></child>
+        </children>
+    </item>
+    <item nodeId="node-2349">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2350"></child>
+        </children>
+    </item>
+    <item nodeId="node-2350">
+        <command xml:space="preserve">nap</command>
+        <result xml:space="preserve">You aren't feeling especially drowsy.
+
+Exits: east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-1958">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">
+Uncanny Lair
+Oddly shaped bones are strewn about this rough cave. Some creature made a nest in one corner out of shredded fungus.
+
+Exits: north (Dungeon Entrance) or down (Disturbing Hallway)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2330"></child>
+            <child nodeId="node-1966"></child>
             <child nodeId="node-1959"></child>
         </children>
     </item>
@@ -4197,6 +4312,153 @@ The cave snake falls over, gasping in pain.
 It drags itself off into the darkness.
 
 Exits: north (Dungeon Entrance) or down (Rockslide Cavern)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2330">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Disturbing Hallway
+The angles here, the colors, the feel of the air -- just wrong. Horribly wrong.
+
+Exits: east (Webby Corridor) or up (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2331"></child>
+        </children>
+    </item>
+    <item nodeId="node-2331">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls.
+
+Exits: east (Waterfall Cave) or west (Disturbing Hallway)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2332"></child>
+        </children>
+    </item>
+    <item nodeId="node-2332">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">
+Waterfall Cave
+Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath.
+
+You can see a soot sprite here.
+
+Exits: north (Evil Archives) or west (Webby Corridor)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2333"></child>
+        </children>
+    </item>
+    <item nodeId="node-2333">
+        <command xml:space="preserve">peck sprite</command>
+        <result xml:space="preserve">You viciously peck the soot sprite, causing 5 points of damage!
+You viciously peck the soot sprite, causing 8 points of damage!
+
+The soot sprite leaps back in shock.
+"Ow, that's going too far!" it shrieks.
+The soot sprite drags itself off into the darkness.
+
+Exits: north (Evil Archives) or west (Webby Corridor)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2334"></child>
+        </children>
+    </item>
+    <item nodeId="node-2334">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">
+Evil Archives
+Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library.
+
+You can see a grumpy kobold here.
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2335"></child>
+        </children>
+    </item>
+    <item nodeId="node-2335">
+        <command xml:space="preserve">kill kobold</command>
+        <result xml:space="preserve">You viciously peck the grumpy kobold, causing 9 points of damage!
+You viciously peck the grumpy kobold, causing 6 points of damage!
+
+The grumpy kobold attacks you, causing 1 points of damage!
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2336"></child>
+        </children>
+    </item>
+    <item nodeId="node-2336">
+        <command xml:space="preserve">kill kobold</command>
+        <result xml:space="preserve">You viciously peck the grumpy kobold, causing 9 points of damage!
+
+The grumpy kobold trips and falls.
+"The dispatcher didn't warn us! This is too much!" it yelps.
+The grumpy kobold drags itself off into the darkness.
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2337"></child>
+        </children>
+    </item>
+    <item nodeId="node-2337">
+        <command xml:space="preserve">x self</command>
+        <result xml:space="preserve">You crane your long, graceful neck to look back. 
+White, muscular, hefty, feathered. 
+Yes, you're still a fabulous goose!
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2338"></child>
+        </children>
+    </item>
+    <item nodeId="node-2338">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 9/10 
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2339"></child>
+        </children>
+    </item>
+    <item nodeId="node-2339">
+        <command xml:space="preserve">honk</command>
+        <result xml:space="preserve">HONK!!!!
+
+A shower of dust cascades from above.
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2340"></child>
+        </children>
+    </item>
+    <item nodeId="node-2340">
+        <command xml:space="preserve">flap</command>
+        <result xml:space="preserve">You flap your wings, menacing everything in the near vicinity.
+
+Exits: south (Waterfall Cave) or east (Jewelled Forest)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
