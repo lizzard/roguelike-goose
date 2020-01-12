@@ -1,6 +1,13 @@
 "Roguelike Goose" by lizzard
 
 
+Use scoring;
+
+When play begins:
+    now the right hand status line is
+        "[the player's surroundings]";
+    now the left hand status line is "[number of visited rooms]/[number of rooms] rooms / [score] points ";
+
 Part 1 - Some rules for mapping
 
 Section 1 - Valid directions
@@ -13,16 +20,25 @@ Definition: a direction (called thataway) is viable if the room
 Section 2 - Create the map dynamically
 
 A room can be picked or unpicked. A room is usually unpicked.
+A room has a number called tours. 
 
 Mysterious ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
-After going to a room:
+Carry out going to a visited room:
+	say "You're going to a VISITED room.[line break]";
+	continue the action;
+	
+
+After going to a room (called the source):
 	if the player is buoyant:
 		say "You get out of the water.";
 		now the player is walking;
 	if there are more than 0 unvisited rooms:
-		[say "Unvisted: [list of unvisited rooms].";]
-		if the player is in a room for the first time:
+		[say "Unvisted: [list of unvisited rooms][line break].";]
+		[say "You are in [the location of the player][line break]";	]
+		say "The number of viable directions is [number of viable directions].";		
+		if the number of viable directions is less than 2 and the location of the player is unpicked:
+			[say "You are in [the location of the player] for the FIRST time[line break]";]
 			now the location of the player is picked;
 			[say "Unpicked: [list of unpicked rooms].";]
 			if there are more than 0 unpicked rooms:
@@ -34,7 +50,7 @@ After going to a room:
 					repeat with way running through available directions:
 						let place be the room way from the location;
 						if place is a room:
-							[say "removing [way] because you just came from there [line break]";]
+							say "removing [way] because you just came from there [line break]";
 							now way is not available;
 				[say "available directions: [list of available directions][line break]";]
 				let nextdir be a random available direction (called way);  
@@ -56,10 +72,11 @@ After going to a room:
 				now Down is available;
 				continue the action;
 			otherwise:
-				if the number of viable directions is less than 2:
+				if the number of viable directions is less than 2 and the number of unpicked rooms is less than 1:
 					say "You have reached a dead end.";
-					now a sleeping dragon is in the location of the player;
+					now a rainbow dragon is in the location of the player;
 					say "Something stirs in the darkness.";
+		continue the action;
 						
 
 Section 3 - Exit related stuff
@@ -67,15 +84,25 @@ Section 3 - Exit related stuff
 [Show exits after room description]
 
 Every turn:
-	let place be location;
-	let count be 0;
-	say "Exits: ";
-	repeat with way running through directions:
-		let place be the room way from the location;
-		if place is a room:
-			increment count;			
-			say "[if count is greater than 1] or [end if][way] ([place])";
-	say "[line break]"; 
+	if the location of the player is not Shorehaven:
+		let place be location;
+		let count be 0;
+		say "Exits: ";
+		repeat with way running through directions:
+			let place be the room way from the location;
+			if place is a room:
+				increment count;			
+				say "[if count is greater than 1] or [end if][way] ([place])";
+		say "[line break]"; 
+		if the number of creatures in the Vault of Vastness is greater than 5 and the rainbow dragon is awake and the dragon is not in the Vault of Vastness:
+			say "The dragon stands up, shaking the floor with its vast bulk.";
+			say "It says, 'You're pretty tough for a goose. Follow me.'";
+			say "The dragon mutters a spell. You are sucked into a magical portal!";
+			now the dragon is in the Vault of Vastness;
+			now the player is in the Vault of Vastness;
+			continue the action;
+
+
 	
 
 [It's still nice to have an explicit exit lister command]
@@ -92,7 +119,7 @@ To say exit list:
 		let place be the room way from the location;
 		if place is a room:
 			increment count;
-			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])". 
+			say "[if count is greater than 1] or [end if][bold type][way][roman type] ([place])";
 
 
 Part 2 - Our friend Goose
@@ -124,10 +151,24 @@ Instead of swimming:
 		say "[line break]The water feels great!";
 		say "Ominous, like a grim battleship, you glide across the crystal waters.";
 		now the player is buoyant;
-		if the location of the player is Cavern of the Lake of Tears:
+	if the location of the player is Shorehaven:
+		say "[line break]The water feels great!";
+		say "Ominous, like a grim battleship, you glide across the crystal waters.";
+		now the player is buoyant;
+		now the player is in Cavern of the Lake of Tears;
+		now Cavern of the Lake of Tears is picked;
+		let nextroom be a random unpicked room;
+		let nextdir be a random available direction (called way);  
+		say "~~~~ next direction will be [nextdir][line break]";
+		change nextdir exit of the location of the player to nextroom; 
+		let reverse be the opposite of the way;
+		change the reverse exit of nextroom to the location of the player;
+		now Cavern of the Lake of Tears is unpicked;
+	continue the action;
+		[if the location of the player is Cavern of the Lake of Tears:
 			now Shorehaven is mapped west of Cavern of the Lake of Tears;
 			say "You notice a little beach to the west.";
-			stop the action.
+			stop the action.]
 		
 [maybe implement fly or levitate from potions]
 
@@ -169,12 +210,27 @@ Carry out pecking:
 	say "You jab your beak at [the noun].";
 
 
-
 Instead of sleeping:
 	if the actor is the player:
 		say "You take a quick snooze and wake up again, feeling frisky.";
 		stop the action.
-
+		
+Instead of waking a rainbow dragon:
+	say "You sidle up to the dragon and give it a little nudge.";
+	now the rainbow dragon is awake;
+	say "The dragon wakes up. It yawns hugely.";
+	stop the action.
+	
+Instead of attacking a rainbow dragon:
+	if the rainbow dragon is asleep:
+		say "You sidle up to the dragon and give it a little nudge.";
+		now the rainbow dragon is awake;
+		say "The dragon wakes up. It yawns hugely.";
+	otherwise:
+		say "You stretch out your neck to attack the dragon, then reconsider.";
+		say "The dragon looks at you.";
+		stop the action.
+	
 
 [Classes: Rogue, Witch, Warrior, Bard]
 
@@ -203,14 +259,41 @@ Instead of taking inventory:
 		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.
 
 
-Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. 
+Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. Equipment has a number called the modifier. Equipment has some text called the stat.
 
 Headgear is a kind of equipment.  The slot of headgear is "head".
 Neckwear is a kind of equipment. The slot of neckwear is "neck".
+Armor is a kind of equipment. The slot of armor is "body".
 
-A diamond tiara is headgear. It is in Dungeon Entrance. 
 
-An AirDnD lanyard is neckwear. It is in Dungeon Entrance. 
+A potion is a kind of edible thing. A potion has a number called mana. 
+
+A healing potion is a potion. 
+
+A diamond tiara and an AirDnD headlamp are headgear. 
+An AirDnD lanyard and an amulet of awesome are neckwear.
+AirDnD platemail and glittering chainmail are armor.
+
+Table of Bad Equipment
+equipment	equip-type	slot	modifier	stat	description
+AirDnD lanyard	"neckwear"	"neck"	1	"ferocity"	"A bright orange cord with the AirDnD logo printed on it in fluorescent green and a badge that says 'VISITOR'."
+AirDnD headlamp	"headgear"	"head"	1	"strength"	"A tin headlamp shining with a little flicker of blue flame."
+AirDnD platemail	"armor"	"body"	1	"strength"	"Cardboard covered with tinfoil, printed with that tacky orange and green logo."
+
+
+Table of Good Equipment
+equipment	equip-type	slot	modifier	stat
+diamond tiara	"headgear"	"head"	10	"ferocity"
+glittering chainmail	"armor"	"body"	3	"strength"
+amulet of awesome	"neckgear"	"neck"	3	"strength"
+
+
+Table of Magical Consumables
+potion name	mana	
+a healing potion	3
+a healing potion	4	
+a healing potion	5
+
 
 Part 4 - Combat system
 
@@ -230,7 +313,8 @@ Carry out attacking someone:
 			choose a random row from the Table of Complaints;
 			say "'[plaint entry]'[one of] it yells.[or] it whines, cringing.[or] it shrieks, scuttling away.[or] it mutters as it turns to run.[or] it mutters.[or] it shrieks.[or] it yelps.[purely at random]";
 			say "[The noun] drags itself off into the darkness.";
-			now the noun is nowhere;
+			now the noun is in the Vault of Vastness;
+			increment the score;
 			stop the action;
 	say "[line break]";
 	repeat with attacks running from 1 to the ferocity of the noun:
@@ -238,7 +322,7 @@ Carry out attacking someone:
 		let the enemy damage be a random number between the strength of the noun and the maxdam;
 		say "[The noun] attacks you, causing [enemy damage] points of damage!";
 		decrease the current hp of the player by the enemy damage;
-		if the current hp of the player is less than 0:
+		if the current hp of the player is less than 1:
 			say "[line break]You swoon.";
 			say "The world shimmers and whirls.";
 			say "You wake up nestled into a hollow of warm sand.";
@@ -272,6 +356,8 @@ Part 5 - NPCs
 
 A creature is a kind of person.  A creature is either working or striking. A creature is usually working.
 
+A creature is either awake or asleep. A creature is usually awake. 
+
 A spider is a creature. 
 A grumpy kobold is a creature. 
 A gelatinous cube is a creature. 
@@ -289,7 +375,7 @@ To assign stats:
 		now the strength of the creature entry is strength entry;
 		now the ferocity of the creature entry is ferocity entry;
 
-A sleeping dragon is a creature. The max hp of a sleeping dragon is 40. The current hp of a sleeping dragon is 40. The strength of a sleeping dragon is 3. The ferocity of a sleeping dragon is 3. 
+A rainbow dragon is a creature. The max hp of a rainbow dragon is 40. The current hp of a rainbow dragon is 40. The strength of a rainbow dragon is 3. The ferocity of a rainbow dragon is 3. A rainbow dragon is asleep. The description of a rainbow dragon is "Iridescent scales armor this enormous [if the dragon is asleep]sleeping [end if]dragon.";
 
 A giant rat is a creature. It is in Dungeon Entrance.
 The max hp of the giant rat is 5. The current hp of the giant rat is 5. The strength of a giant rat is 1. The ferocity of a giant rat is 1.
@@ -326,18 +412,20 @@ A trophy case is in Dungeon Entrance. It is a container. It is fixed in place. T
 
 
 
-Jewelled Forest is a room. "Marvellous columns march down the length of this immense cavern. Jewel-like lights shine from deep within."
+Jewelled Forest is a room. "Marvellous columns march down the length of this immense cave. Jewel-like lights shine from deep within."
 
-A room called Cavern of the Lake of Tears is west of Jewelled Forest. It is picked. "A still, deep lake stretches into the distance. It's vast. You can't see the other side."   
+Cavern of the Lake of Tears is a room. It is unpicked. "A still, deep lake stretches into the distance. It's vast. You can't see the other side."   
 
 An object called the lake is in Cavern of the Lake of Tears. It is scenery.
 
-Before going to the Cavern of the Lake of Tears:
+[Before going to the Cavern of the Lake of Tears:
 	now nowhere is mapped west of Cavern of the Lake of Tears;
-	continue the action. 
+	continue the action. ]
 	
-Shorehaven is west of The Cavern of the Lake of Tears. It is picked. The description is "A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap.";
+Shorehaven is a room. It is picked. The description is "A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap. Or you can swim out into the lake.";
 [you appear here if you faint in combat, and being here restores your hit points]
+
+
 
 Evil Archives is a room. The description is "Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library."
 
@@ -392,11 +480,6 @@ Vault of Vastness is a room. It is picked. The description is "Soaring arches ov
 
 Part 7 - Objects
 
-
-
-
-
-[Table of Equipment]
 
 
 
