@@ -3,6 +3,18 @@
 
 Use scoring;
 
+The maximum score is 12. 
+
+
+Requesting the full score is an action out of world. Understand "full score" or "full" as requesting the full score. 
+
+The announce the full score rule is listed instead of the announce the score rule in the carry out requesting the score rules. 
+
+This is the announce the full score rule:
+	say "Your score is [score] out of a possible [maximum score].[line break]";
+	say "So far, you have defeated [list of creatures in the Vault of Vastness].";
+	
+
 When play begins:
     now the right hand status line is
         "[the player's surroundings]";
@@ -531,7 +543,9 @@ After going from Mysterious ruins:
 
 Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large cold room. [paragraph break]A large, colorful sign is on the wall."
 
-A trophy case is in Dungeon Entrance. It is a container. It is fixed in place. The description of a trophy case is "An enormous marble trophy case. The front is carved with the motto, 'Vae victis'".
+A trophy case is in Dungeon Entrance. It is an openable container. It is closed. It is fixed in place. The description of a trophy case is "An enormous marble trophy case. The front is carved with the motto, 'Vae victis'".
+
+A discarded pay stub is an object. It is in a trophy case. The description of a discarded pay stub is "A dirty piece of parchment. It reads:[paragraph break]At AirDnD, the only limit to your career is how much you care! [line break]We love being Your Dungeon Away From Home.[paragraph break]Title: Associate Rogue[line break]Associate ID: 6669982100BX[line break]Name: Kstlyplk Squishface[line break]Days: 7, Hours: 89[line break] Pay rate: 2 copper coins per day[line break] Vacation: 0 hours [line break]Accidental Enchantment, Dismemberment, and Death Insurance: 1 copper [line break]Armor cleaning fee: 3 half coppers[line break]Workplace safety training fee: 1 groat[line break]Weapon, fang, and claw sharpening fee: 1 half groat [line break]Total pay: 5.5 copper".
 
 A welcome sign is scenery in Dungeon Entrance. The description of a welcome sign is "A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, 'Welcome to your new Dungeon Away From Home! Let AirDnD be your Guide, as we bring you to new depths in Adventuring! *AirDnD*"
 
@@ -542,10 +556,10 @@ Cavern of the Lake of Tears is a room. It is unpicked. "A still, deep lake stret
 
 An object called the lake is in Cavern of the Lake of Tears. It is scenery. The description of the lake is "Dark waters, a glassy surface. Cool to the toes. Just right for a swim."
 
-[Before going to the Cavern of the Lake of Tears:
-	now nowhere is mapped west of Cavern of the Lake of Tears;
-	continue the action. ]
-	
+
+A torn parchment is an object in Cavern of the Lake of Tears. The description of a torn parchment is "It's dusty, smudged, and looks like it's been folded up in someone's pocket for a while. It reads,[paragraph break]Dear Gnarf, [line break]   How's things back at the village? I'm not doing so good. I took the AirDnD gig. Only place in the realm that would take me with no references. Avoid if if you can. They WATCH you, all the time, we can't tell how, so you can't even take a little nap on a slow day. Every once in a while, you get a creepy voice out of nowhere telling you to move to some different location in the dungeon. [line break]   And this dungeon, I swear to Sfigplatz, it's cold, it's dirty, it's wet, there's nowhere to pee and no break room, we just stand around all day. It's impossible to get around, sometimes we can't even leave, because whenever they move us to a new cavern, all the rooms seem to have been changed around! Anyway, I hear a noise, someone coming, must.... ARRRRRRGH!!![paragraph break] The letter ends here, as a splotch of greenish ichor seems to have burned the parchment away.";
+
+
 Shorehaven is a room. It is picked. The description is "A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap. Or you can swim out into the lake.";
 [you appear here if you faint in combat, and being here restores your hit points]
 
