@@ -36,7 +36,7 @@ After going to a room (called the source):
 	if there are more than 0 unvisited rooms:
 		[say "Unvisted: [list of unvisited rooms][line break].";]
 		[say "You are in [the location of the player][line break]";	]
-		say "The number of viable directions is [number of viable directions].";		
+		[say "The number of viable directions is [number of viable directions].";	]	
 		if the number of viable directions is less than 2 and the location of the player is unpicked:
 			[say "You are in [the location of the player] for the FIRST time[line break]";]
 			now the location of the player is picked;
@@ -64,6 +64,23 @@ After going to a room (called the source):
 						choose a random row from the Table of Mobs;
 						now creature entry is in the location of the player;
 						blank out the whole row;
+				if a random chance of 2 in 10 succeeds:
+					unless Table of Magical Consumables is empty:
+						choose a random row from the Table of Magical Consumables;
+						now potion entry is in the location of the player;
+						blank out the whole row;
+				if there are more than 10 unpicked rooms:
+					if a random chance of 3 in 10 succeeds:
+						unless Table of Bad Equipment is empty:
+							choose a random row from the Table of Bad Equipment;
+							now equipment entry is in the location of the player;
+							blank out the whole row;
+				if there are fewer than 10 unpicked rooms:
+					if a random chance of 3 in 10 succeeds:
+						unless Table of Good Equipment is empty:
+							choose a random row from the Table of Good Equipment;
+							now equipment entry is in the location of the player;
+							blank out the whole row;						
 			[now reset the list of available directions]
 				now North is available;
 				now South is available; 
@@ -259,40 +276,50 @@ Instead of taking inventory:
 		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.
 
 
-Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. Equipment has a number called the modifier. Equipment has some text called the stat.
+Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. Equipment has a number called the modifier. Equipment has some text called the stat. 
 
-Headgear is a kind of equipment.  The slot of headgear is "head".
-Neckwear is a kind of equipment. The slot of neckwear is "neck".
-Armor is a kind of equipment. The slot of armor is "body".
+A potion is a kind of edible thing. A potion has a number called mana.
 
+A healing potion is a potion. [The mana of a healing potion is 3. ]
+A vial of coffee is a potion. 
 
-A potion is a kind of edible thing. A potion has a number called mana. 
-
-A healing potion is a potion. 
-
-A diamond tiara and an AirDnD headlamp are headgear. 
-An AirDnD lanyard and an amulet of awesome are neckwear.
-AirDnD platemail and glittering chainmail are armor.
+A diamond tiara, an AirDnD headlamp, an AirDnD lanyard, an amulet of awesome, AirDnD platemail, and glittering chainmail are equipment. 
 
 Table of Bad Equipment
-equipment	equip-type	slot	modifier	stat	description
-AirDnD lanyard	"neckwear"	"neck"	1	"ferocity"	"A bright orange cord with the AirDnD logo printed on it in fluorescent green and a badge that says 'VISITOR'."
-AirDnD headlamp	"headgear"	"head"	1	"strength"	"A tin headlamp shining with a little flicker of blue flame."
-AirDnD platemail	"armor"	"body"	1	"strength"	"Cardboard covered with tinfoil, printed with that tacky orange and green logo."
+equipment	slot	modifier	stat	description
+AirDnD lanyard	"neck"	1	"ferocity"	"A bright orange cord with the AirDnD logo printed on it in fluorescent green and a badge that says 'VISITOR'."
+AirDnD headlamp	"head"	1	"strength"	"A tin headlamp shining with a little flicker of blue flame."
+AirDnD platemail	"body"	1	"strength"	"Cardboard covered with tinfoil, printed with that tacky orange and green logo."
 
 
 Table of Good Equipment
-equipment	equip-type	slot	modifier	stat
-diamond tiara	"headgear"	"head"	10	"ferocity"
-glittering chainmail	"armor"	"body"	3	"strength"
-amulet of awesome	"neckgear"	"neck"	3	"strength"
+equipment	slot	modifier	stat	description
+diamond tiara	"head"	10	"ferocity"	"Ice, fire, and steel."	
+glittering chainmail	"body"	3	"strength"	"Tough, sleek titanium armor."
+amulet of awesome	"neck"	3	"strength"	"A golden amulet that spells out the word 'AWESOME' in flowing script."
 
 
 Table of Magical Consumables
-potion name	mana	
-a healing potion	3
+potion	mana	
+a healing potion	3	
 a healing potion	4	
 a healing potion	5
+a vial of coffee	2
+a vial of coffee	3
+	
+
+After eating a healing potion:
+	increase the current hp of the player by the mana;
+	say "You feel more vigorous!";
+	
+After eating a vial of coffee:
+	increase the strength of the player by the mana;
+	say "You feel mighty!";
+	
+Understand "drink [potion]"  and "quaff [potion]" as eating.
+	
+
+	
 
 
 Part 4 - Combat system
@@ -374,6 +401,20 @@ To assign stats:
 		now the current hp of the creature entry is current hp entry;
 		now the strength of the creature entry is strength entry;
 		now the ferocity of the creature entry is ferocity entry;
+	repeat through the Table of Magical Consumables:
+		now the mana of the potion entry is mana entry;
+	repeat through the Table of Bad Equipment:
+		now the slot of the equipment entry is slot entry;
+		now the modifier of the equipment entry is modifier entry;
+		now the stat of the equipment entry is stat entry;
+		now the description of the equipment entry is description entry;
+	repeat through the Table of Good Equipment:
+		now the slot of the equipment entry is slot entry;
+		now the modifier of the equipment entry is modifier entry;
+		now the stat of the equipment entry is stat entry;
+		now the description of the equipment entry is description entry;
+		
+
 
 A rainbow dragon is a creature. The max hp of a rainbow dragon is 40. The current hp of a rainbow dragon is 40. The strength of a rainbow dragon is 3. The ferocity of a rainbow dragon is 3. A rainbow dragon is asleep. The description of a rainbow dragon is "Iridescent scales armor this enormous [if the dragon is asleep]sleeping [end if]dragon.";
 

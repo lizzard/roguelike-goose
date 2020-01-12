@@ -2220,15 +2220,16 @@ The number of viable directions is 0.
 Dungeon Entrance
 Stone walls, mildewed with glowing stuff, widen into a large bare room.
 
-You can see a cave snake, a giant rat and a trophy case (empty) here.
+You can see an AirDnD headlamp, a giant rat and a trophy case (empty) here.
 
-Exits: south (Jewelled Forest)
+Exits: west (Disturbing Hallway)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1710"></child>
             <child nodeId="node-1707"></child>
             <child nodeId="node-1667"></child>
+            <child nodeId="node-2379"></child>
             <child nodeId="node-1602"></child>
             <child nodeId="node-1588"></child>
             <child nodeId="node-1585"></child>
@@ -2246,10 +2247,12 @@ Exits: south (Jewelled Forest)
             <child nodeId="node-1741"></child>
             <child nodeId="node-2141"></child>
             <child nodeId="node-2224"></child>
+            <child nodeId="node-2381"></child>
             <child nodeId="node-1300"></child>
             <child nodeId="node-1297"></child>
             <child nodeId="node-1289"></child>
             <child nodeId="node-1278"></child>
+            <child nodeId="node-2367"></child>
             <child nodeId="node-1255"></child>
             <child nodeId="node-1244"></child>
             <child nodeId="node-1179"></child>
@@ -3822,6 +3825,70 @@ Exits: east (Den of Darkness)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2367">
+        <command xml:space="preserve">take potion</command>
+        <result xml:space="preserve">Taken.
+
+Exits: down (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2374"></child>
+            <child nodeId="node-2368"></child>
+        </children>
+    </item>
+    <item nodeId="node-2368">
+        <command xml:space="preserve">peck kobold</command>
+        <result xml:space="preserve">You viciously peck the grumpy kobold, causing 5 points of damage!
+You viciously peck the grumpy kobold, causing 4 points of damage!
+
+The grumpy kobold attacks you, causing 2 points of damage!
+
+Exits: west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2369"></child>
+        </children>
+    </item>
+    <item nodeId="node-2369">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 8/10 
+
+Exits: west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2370"></child>
+        </children>
+    </item>
+    <item nodeId="node-2370">
+        <command xml:space="preserve">eat potion</command>
+        <result xml:space="preserve">Exits: west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2371"></child>
+        </children>
+    </item>
+    <item nodeId="node-2371">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 11/10 
+
+Exits: west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2374">
+        <command xml:space="preserve">drink potion</command>
+        <result xml:space="preserve">There's nothing suitable to drink here.
+
+Exits: down (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1278">
         <command xml:space="preserve">sw</command>
         <result xml:space="preserve">You're going to a new room.
@@ -5293,6 +5360,36 @@ Exits: south (Chilly Mausoleum)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2381">
+        <command xml:space="preserve">quaff potion</command>
+        <result xml:space="preserve">(first taking the healing potion)
+You feel more vigorous!
+
+Exits: north (Marble Halls)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2382"></child>
+        </children>
+    </item>
+    <item nodeId="node-2382">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 13/10 
+
+Exits: north (Marble Halls)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2383"></child>
+        </children>
+    </item>
+    <item nodeId="node-2383">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-2224">
         <command xml:space="preserve">peck sprite</command>
         <result xml:space="preserve">You viciously peck the soot sprite, causing 4 points of damage!
@@ -6617,13 +6714,13 @@ Exits: south (Hall of Time) or up (Den of Darkness) or down (Evil Archives)
     <item nodeId="node-1352">
         <command xml:space="preserve">peck rat</command>
         <result xml:space="preserve">You viciously peck the giant rat, causing 3 points of damage!
-You viciously peck the giant rat, causing 5 points of damage!
+You viciously peck the giant rat, causing 7 points of damage!
 
 The giant rat leaps back in shock.
-"Oooh, that smarts," it whines, cringing.
+"I went to Monster Polytechnic for this?" it whines, cringing.
 The giant rat drags itself off into the darkness.
 
-Exits: west (Chilly Mausoleum)
+Exits: east (Disturbing Hallway)
 
 [Your score has just gone up by one point.]
 
@@ -9716,22 +9813,18 @@ Exits: north (Uncanny Lair) or up (Waterfall Cave)
     </item>
     <item nodeId="node-1403">
         <command xml:space="preserve">e</command>
-        <result xml:space="preserve">You are in Chilly Mausoleum
-The number of viable directions is 1.
-You are in Chilly Mausoleum for the FIRST time
-~~~~ next room will be Waterfall Cave
-available directions: north, south, east, west and down
+        <result xml:space="preserve">The number of viable directions is 1.
 removing west because you just came from there 
-~~~~ next direction will be down
 
-Chilly Mausoleum
-Cold seeps into your bones. Faceless tombs loom overhead.
+Disturbing Hallway
+The angles here, the colors, the feel of the air -- just wrong. Horribly wrong.
 
-Exits: west (Dungeon Entrance) or down (Waterfall Cave)
+Exits: east (Webby Corridor) or west (Dungeon Entrance)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1408"></child>
+            <child nodeId="node-2388"></child>
             <child nodeId="node-1844"></child>
             <child nodeId="node-1404"></child>
         </children>
@@ -10226,6 +10319,186 @@ Exits: north (Disturbing Hallway) or south (Jewelled Forest)
 Unpicked: nothing.
 
 Exits: north (Waterfall Cave) or south (Evil Archives) or east (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2388">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">The number of viable directions is 1.
+removing west because you just came from there 
+
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls.
+
+You can see a soot sprite here.
+
+Exits: north (Chamber of Lights) or west (Disturbing Hallway)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2389"></child>
+        </children>
+    </item>
+    <item nodeId="node-2389">
+        <command xml:space="preserve">peck sprite</command>
+        <result xml:space="preserve">You viciously peck the soot sprite, causing 5 points of damage!
+You viciously peck the soot sprite, causing 5 points of damage!
+
+The soot sprite leaps back in shock.
+"I went to Monster Polytechnic for this?" it yells.
+The soot sprite drags itself off into the darkness.
+
+Exits: north (Chamber of Lights) or west (Disturbing Hallway)
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2390"></child>
+        </children>
+    </item>
+    <item nodeId="node-2390">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">The number of viable directions is 1.
+removing south because you just came from there 
+
+Chamber of Lights
+An uncanny mottled glow emanates from the walls of this high-ceilinged cavern.
+
+Exits: south (Webby Corridor) or down (Evil Archives)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2391"></child>
+        </children>
+    </item>
+    <item nodeId="node-2391">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The number of viable directions is 1.
+
+Evil Archives
+Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library.
+
+You can see an iridium bat here.
+
+Exits: west (Glittering Shrine) or up (Chamber of Lights)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2392"></child>
+        </children>
+    </item>
+    <item nodeId="node-2392">
+        <command xml:space="preserve">peck bat</command>
+        <result xml:space="preserve">You viciously peck the iridium bat, causing 9 points of damage!
+You viciously peck the iridium bat, causing 3 points of damage!
+
+The iridium bat attacks you, causing 5 points of damage!
+
+Exits: west (Glittering Shrine) or up (Chamber of Lights)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2393"></child>
+        </children>
+    </item>
+    <item nodeId="node-2393">
+        <command xml:space="preserve">peck bat</command>
+        <result xml:space="preserve">You viciously peck the iridium bat, causing 5 points of damage!
+
+The iridium bat leaps back in shock.
+"That's it, I quit!" it whines, cringing.
+The iridium bat drags itself off into the darkness.
+
+Exits: west (Glittering Shrine) or up (Chamber of Lights)
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2394"></child>
+        </children>
+    </item>
+    <item nodeId="node-2394">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">The number of viable directions is 1.
+removing east because you just came from there 
+
+Glittering Shrine
+Flecks of shining mica gleam from granite walls.
+
+You can see an obsidian altar here.
+
+Exits: south (Rockslide Cavern) or east (Evil Archives)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2395"></child>
+        </children>
+    </item>
+    <item nodeId="node-2395">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">The number of viable directions is 1.
+removing north because you just came from there 
+
+Rockslide Cavern
+Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them.
+
+You can see a vial of coffee and a cave snake here.
+
+Exits: north (Glittering Shrine) or west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2396"></child>
+        </children>
+    </item>
+    <item nodeId="node-2396">
+        <command xml:space="preserve">take vial</command>
+        <result xml:space="preserve">Taken.
+
+Exits: north (Glittering Shrine) or west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2397"></child>
+        </children>
+    </item>
+    <item nodeId="node-2397">
+        <command xml:space="preserve">drink vial</command>
+        <result xml:space="preserve">You feel mighty!
+
+Exits: north (Glittering Shrine) or west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2398"></child>
+        </children>
+    </item>
+    <item nodeId="node-2398">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 6   Ferocity: 2   HP: 5/10 
+
+Exits: north (Glittering Shrine) or west (Luminous Gardens)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2399"></child>
+        </children>
+    </item>
+    <item nodeId="node-2399">
+        <command xml:space="preserve">peck snake</command>
+        <result xml:space="preserve">You viciously peck the cave snake, causing 7 points of damage!
+You viciously peck the cave snake, causing 8 points of damage!
+
+The cave snake trips and falls.
+"Oooh, that smarts," it shrieks, scuttling away.
+The cave snake drags itself off into the darkness.
+
+Exits: north (Glittering Shrine) or west (Luminous Gardens)
+
+[Your score has just gone up by one point.]
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -16406,6 +16679,16 @@ Available directions: north, east, west and down
 
 Rockslide Cavern
 Exits: south
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2379">
+        <command xml:space="preserve">drink potion</command>
+        <result xml:space="preserve">(first taking the healing potion)
+You feel more vigorous!
+
+Exits: down (Webby Corridor)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
