@@ -8,11 +8,11 @@
 
 
 It's a beautiful day in the dungeon, and you are a horrible goose.
-Try typing "help" if you aren't sure how to play.
+Try typing "help" for instructions on how to play.
 
 Roguelike Goose
 An Interactive Fiction by lizzard
-Release 1 / Serial number 200111 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
+Release 1 / Serial number 200112 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
 
 Mysterious ruins
 Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. 
@@ -4546,7 +4546,7 @@ THE END.
     </item>
     <item nodeId="node-1178">
         <command xml:space="preserve">d</command>
-        <result xml:space="preserve">Attempting stealth, you stretch out your long and graceful neck.
+        <result xml:space="preserve">You waddle on, nonchalant.
 
 The walls rumble. Rocks fall.
 You can't see the sky anymore!
@@ -4557,9 +4557,9 @@ Stone walls, mildewed with glowing stuff, widen into a large cold room.
 
 A large, colorful sign is on the wall.
 
-You can see a grumpy kobold and a trophy case (empty) here.
+You can see a healing potion, a cave snake and a trophy case (empty) here.
 
-Exits: east (Webby Corridor)
+Exits: north (Marble Halls)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -4570,6 +4570,8 @@ Exits: east (Webby Corridor)
             <child nodeId="node-1602"></child>
             <child nodeId="node-1588"></child>
             <child nodeId="node-1585"></child>
+            <child nodeId="node-3116"></child>
+            <child nodeId="node-3118"></child>
             <child nodeId="node-1583"></child>
             <child nodeId="node-1578"></child>
             <child nodeId="node-1573"></child>
@@ -18458,6 +18460,20 @@ Exits: west (Dungeon Entrance) or down (Rockslide Cavern)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-3118">
+        <command xml:space="preserve">honk at snake</command>
+        <result xml:space="preserve">I only understood you as far as wanting to honk.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-3116">
+        <command xml:space="preserve">honk at kobold</command>
+        <result xml:space="preserve">I only understood you as far as wanting to honk.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1585">
         <command xml:space="preserve">help</command>
         <result xml:space="preserve">That's not a verb I recognise.
@@ -20980,7 +20996,147 @@ You can go up (Magnificent ruins) from here.
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-2824"></child>
             <child nodeId="node-1737"></child>
+            <child nodeId="node-3106"></child>
         </children>
+    </item>
+    <item nodeId="node-3106">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">Grunting with effort, you clamber over the rocky floor.
+
+The walls rumble. Rocks fall.
+You can't see the sky anymore!
+There is no way out.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large cold room. 
+
+A large, colorful sign is on the wall.
+
+You can see a wispy ghost and a trophy case (empty) here.
+
+Exits: east (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3107"></child>
+        </children>
+    </item>
+    <item nodeId="node-3107">
+        <command xml:space="preserve">peck ghost</command>
+        <result xml:space="preserve">You viciously peck the wispy ghost, causing 5 points of damage!
+You viciously peck the wispy ghost, causing 9 points of damage!
+
+The wispy ghost trips and falls.
+"Level 1 humans only, that's what they promised," it shrieks, scuttling away.
+The wispy ghost drags itself off into the darkness.
+
+Exits: east (Hall of Time)
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3108"></child>
+        </children>
+    </item>
+    <item nodeId="node-3108">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">Your beady-eyed glance darts across yet another corridor.
+
+Hall of Time
+A long, narrow hall, flickering with light from magefire sconces. The painted walls show the progression of time through planets and stars, sun and moons.
+
+You can see a tentacled horror here.
+
+Exits: west (Dungeon Entrance) or down (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3109"></child>
+        </children>
+    </item>
+    <item nodeId="node-3109">
+        <command xml:space="preserve">peck horror</command>
+        <result xml:space="preserve">You viciously peck the tentacled horror, causing 7 points of damage!
+You viciously peck the tentacled horror, causing 5 points of damage!
+
+The tentacled horror attacks you, causing 6 points of damage!
+The tentacled horror attacks you, causing 6 points of damage!
+
+You swoon.
+The world shimmers and whirls.
+You wake up nestled into a hollow of warm sand.
+You feel completely healed after your nap.
+
+Shorehaven
+A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap. Or you can swim out into the lake.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3110"></child>
+        </children>
+    </item>
+    <item nodeId="node-3110">
+        <command xml:space="preserve">look</command>
+        <result xml:space="preserve">Shorehaven
+A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap. Or you can swim out into the lake.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3111"></child>
+        </children>
+    </item>
+    <item nodeId="node-3111">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying nothing.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3112"></child>
+        </children>
+    </item>
+    <item nodeId="node-3112">
+        <command xml:space="preserve">out</command>
+        <result xml:space="preserve">But you aren't in anything at the moment.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3113"></child>
+        </children>
+    </item>
+    <item nodeId="node-3113">
+        <command xml:space="preserve">swim</command>
+        <result xml:space="preserve">
+The water feels great!
+Ominous, like a grim battleship, you glide across the crystal waters.
+
+Cavern of the Lake of Tears
+A still, deep lake stretches into the distance. It's vast. You can't see the other side.
+
+~~~~ next direction will be down
+
+Exits: up (Hall of Time) or down (Rockslide Cavern)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-3114"></child>
+        </children>
+    </item>
+    <item nodeId="node-3114">
+        <command xml:space="preserve">down</command>
+        <result xml:space="preserve">Your broad foot webs slappity-slap across the dungeon floor.
+
+You get out of the water.
+
+Rockslide Cavern
+Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them.
+
+You can see a confused adventurer here.
+
+Exits: east (Evil Archives) or up (Cavern of the Lake of Tears)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1737">
         <command xml:space="preserve">d</command>

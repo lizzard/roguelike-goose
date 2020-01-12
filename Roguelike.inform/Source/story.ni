@@ -8,7 +8,7 @@ When play begins:
         "[the player's surroundings]";
     now the left hand status line is "[number of visited rooms]/[number of rooms] rooms / [score] points ";
 	say "It's a beautiful day in the dungeon, and you are a horrible goose.";
-	say "Try typing 'help' if you aren't sure how to play.";
+	say "Try typing 'help' for instructions on how to play.";
 
 Part 1 - Some rules for mapping
 
@@ -118,7 +118,6 @@ Every turn:
 		say "'Renounce the evil AirDnD Overlords!!'";
 		say "'Cast off your tacky, ridiculously branded garments! ";
 		say "What are you, a waddling billboard, or a warrior?";
-		say "Join our glorious Union!";
 	if the number of creatures in the Vault of Vastness is greater than 6 and the rainbow dragon is awake and the dragon is not in the Vault of Vastness and the player is not wearing a lanyard and the player is not wearing platemail and the player is not wearing a headlamp:
 		say "The dragon stands up, shaking the floor with its vast bulk.";
 		say "It says, 'Yeah, OK, I have to hand it to you. Follow me.'";
@@ -130,16 +129,14 @@ Every turn:
 		say "The dragon looks you up and down and sighs heavily.";
 		say "'You look tough, and I've heard good things.";
 		say "'But I need more proof of your worth. Go back and keep fighting.";
-		say "The dragon falls back asleep, twitching lazily.";	
+		say "The dragon falls back asleep.";	
 	if the player is in the Vault of Vastness:
-		say "You look around. The assembled creatures are waving union placards and megaphones! They're stomping on torn, bloody AirDnD motivational posters and timesheets!";
-		say "The dragon hands you a diamond tiara!";
-		now the diamond tiara is carried by the player;
+		say "You look around. The assembled creatures are waving union placards and megaphones! [line break]They're stomping on torn, bloody AirDnD motivational posters and timesheets!";
 		say "'Magnificent, Powerful Goose!' says the dragon.";
-		say "We'd like to elect you Leader of the Dungeon Monster's Union!";
-		say "Everyone cheers lustily!! [paragraph break]";
+		say "We have elected you Boss Monster of the new Dungeon Monster's Union!";
+		say "Everyone cheers heartily!! [paragraph break]";
 		say "Congratulations. By defeating the oppressed, underpaid, gig-worker monsters of this realm, you have inspired them to unionize!";
-		say "You settle happily into your new role as Boss Monster of the Dungeon with your new friends and comrades. May you defeat many adventurers in future days!";
+		say "You settle happily into your new role as Boss Monster of the Dungeon with your new friends and comrades. [line break]May you defeat many adventurers in future days!";
 		say "THE END.";
 
 
@@ -192,8 +189,9 @@ Understand "swim" as swimming. Swimming is an action applying to nothing.
 
 Instead of swimming:
 	if the location of the player is Cavern of the Lake of Tears or the location of the player is Waterfall Cave:
-		say "[line break]The water feels great!";
+		say "[line break]The water feels so refreshing!.";
 		say "Ominous, like a grim battleship, you glide across the crystal waters.";
+		increase the current hp of the player by 1;
 		now the player is buoyant;
 	if the location of the player is Shorehaven:
 		say "[line break]The water feels great!";
@@ -203,7 +201,7 @@ Instead of swimming:
 		now Cavern of the Lake of Tears is picked;
 		let nextroom be a random unpicked room;
 		let nextdir be a random available direction (called way);  
-		say "~~~~ next direction will be [nextdir][line break]";
+		[say "~~~~ next direction will be [nextdir][line break]";]
 		change nextdir exit of the location of the player to nextroom; 
 		let reverse be the opposite of the way;
 		change the reverse exit of nextroom to the location of the player;
@@ -340,10 +338,13 @@ A weapon is a kind of thing.
 
 A potion is a kind of edible thing. A potion has a number called mana.
 
-A healing potion is a potion. [The mana of a healing potion is 3. ]
-A vial of coffee is a potion. 
+A healing potion is a potion. The description of a healing potion is "A strangely gelatinous substance, glowing faintly green."
 
-A diamond tiara, an AirDnD headlamp, an AirDnD lanyard, an amulet of awesome, AirDnD platemail, and glittering chainmail are equipment. 
+A vial of coffee is a potion. The description of a vial of coffee is "A fragile container of tasty looking hot coffee."
+
+A diamond tiara, an AirDnD headlamp, an AirDnD lanyard, an amulet of awesome, AirDnD platemail, and a glittering cloak are equipment. 
+
+
 
 After wearing equipment (called E):
 	let M be the modifier of E;
@@ -371,12 +372,12 @@ AirDnD platemail	"body"	1	"strength"	"Cardboard covered with tinfoil, printed wi
 Table of Good Equipment
 equipment	slot	modifier	stat	description
 diamond tiara	"head"	10	"ferocity"	"Ice, fire, and steel."
-glittering chainmail	"body"	3	"strength"	"Tough, sleek titanium armor."
+glittering cloak	"body"	3	"strength"	"Tough, sleek titanium armor."
 amulet of awesome	"neck"	3	"strength"	"A golden amulet that spells out the word 'AWESOME' in flowing script."
 
 
 Table of Magical Consumables
-potion	mana	
+potion	mana
 a healing potion	3	
 a healing potion	4	
 a healing potion	5
@@ -437,17 +438,24 @@ Carry out attacking someone:
 [Silly things the mobs say when they are defeated]
 Table of Complaints
 Plaint
-"This isn't how things are supposed to go!"
+"This isn't how things are supposed to go in the dungeon!"
 "I went to Monster Polytechnic for this?"
-"Scare the adventurers, they said, it's easy, they said,"
-"Level 1 humans only, that's what they promised,"
+"Scare the adventurers, they said, it's easy, the dispatcher said,"
+"Level 1 humans only, that's what my boss promised,"
 "Oooh, that smarts,"
 "Mama always told me never to cross a dungeon picket line,"
 "The dispatcher didn't warn us! This is too much!"
 "What ARE you?"
+"I hate this job. Stupid AirDnD dungeon doesn't even have a bathroom."
 "Ow, that's going too far!"
+"Yeow! I don't get paid enough for this!"
+"Corporate headquarters didn't warn us about this!"
 "Ouch! I'm out of here!"
-"That's it, I quit!"
+"That's it, I quit! AirDnD can bite my scaly butt!"
+"AirDnD sucks! Worst job ever!"
+"Arrrgh, I don't make enough on tips to cover the cost of healing potions!"
+"Ow, ow ow!!!! I can't afford a cleric. Free MonsterCare for all!"
+
 
 [magic]
 
@@ -497,7 +505,7 @@ A rainbow dragon is a creature. The max hp of a rainbow dragon is 40. The curren
 Table of Mobs
 creature	max hp	current hp	strength	ferocity	description
 giant rat	5	5	1	1	"like a pushover. Peck it."
-spider	15	15	1	1	"a delicious little bug"
+spider	15	15	1	1	"nervous"
 grumpy kobold	20	20	1	1	"pretty tough for its size"
 gelatinous cube	25	25	3	1	"formidible"
 cave snake	12	12	2	1	"like it needs its butt kicked"
@@ -532,7 +540,7 @@ Jewelled Forest is a room. "Marvellous columns march down the length of this imm
 
 Cavern of the Lake of Tears is a room. It is unpicked. "A still, deep lake stretches into the distance. It's vast. You can't see the other side."   
 
-An object called the lake is in Cavern of the Lake of Tears. It is scenery.
+An object called the lake is in Cavern of the Lake of Tears. It is scenery. The description of the lake is "Dark waters, a glassy surface. Cool to the toes. Just right for a swim."
 
 [Before going to the Cavern of the Lake of Tears:
 	now nowhere is mapped west of Cavern of the Lake of Tears;
@@ -569,7 +577,7 @@ Disturbing Hallway is a room. "The angles here, the colors, the feel of the air 
 
 Waterfall Cave is a room. "Water pours down from high above, catching on stalactites and glinting in the eerie glow from the walls. A little pool lies underneath."
 
-A pool is in Waterfall Cave. It is scenery.
+A pool is in Waterfall Cave. It is scenery. The description of a pool is "Looks refreshing.  Crystal clear. Maybe you should have a swim!"
 
 Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall. "
 
@@ -630,5 +638,6 @@ x: lets you examine something more closely [line break]
 x self: look at yourself [line break]
 honk, peck, flap, kill: Try them and see what happens! [line break]
 wear: put on a wearable object [line break]
+remove (or take off): remove a wearable object[line break]
 stats: shows your current strength, ferocity, and hit points[line break]
 score: shows your current score [line break]"
