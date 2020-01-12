@@ -7,6 +7,9 @@
         <result xml:space="preserve">
 
 
+It's a beautiful day in the dungeon, and you are a horrible goose.
+Try typing "help" if you aren't sure how to play.
+
 Roguelike Goose
 An Interactive Fiction by lizzard
 Release 1 / Serial number 200111 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD
@@ -24,6 +27,7 @@ Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in
             <child nodeId="node-1164"></child>
             <child nodeId="node-1163"></child>
             <child nodeId="node-1160"></child>
+            <child nodeId="node-2833"></child>
             <child nodeId="node-1156"></child>
             <child nodeId="node-1087"></child>
             <child nodeId="node-1084"></child>
@@ -36,7 +40,88 @@ Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in
             <child nodeId="node-1016"></child>
             <child nodeId="node-1007"></child>
             <child nodeId="node-1003"></child>
+            <child nodeId="node-2850"></child>
         </children>
+    </item>
+    <item nodeId="node-2850">
+        <command xml:space="preserve">wield</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2851"></child>
+        </children>
+    </item>
+    <item nodeId="node-2851">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. Rocks fall.
+You can't see the sky anymore!
+There is no way out.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall.
+
+You can see an AirDnD lanyard, a giant rat and a trophy case (empty) here.
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2852"></child>
+        </children>
+    </item>
+    <item nodeId="node-2852">
+        <command xml:space="preserve">take lanyard</command>
+        <result xml:space="preserve">Taken.
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2853"></child>
+        </children>
+    </item>
+    <item nodeId="node-2853">
+        <command xml:space="preserve">wear lanyard</command>
+        <result xml:space="preserve">You put on the AirDnD lanyard.
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2854"></child>
+        </children>
+    </item>
+    <item nodeId="node-2854">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2855"></child>
+        </children>
+    </item>
+    <item nodeId="node-2855">
+        <command xml:space="preserve">remove lanyard</command>
+        <result xml:space="preserve">You take off the AirDnD lanyard.
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2856"></child>
+        </children>
+    </item>
+    <item nodeId="node-2856">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: east (Glittering Shrine)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
     </item>
     <item nodeId="node-1003">
         <command xml:space="preserve">take tiara</command>
@@ -81,12 +166,14 @@ Exits: up (Magnificent ruins)
     </item>
     <item nodeId="node-1007">
         <command xml:space="preserve">swim</command>
-        <result xml:space="preserve">You must supply a noun.
+        <result xml:space="preserve">There's not enough water here for swimming.
 
 Exits: down (Dungeon Entrance)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1008"></child>
+        <children><child nodeId="node-2838"></child>
+            <child nodeId="node-1008"></child>
         </children>
     </item>
     <item nodeId="node-1008">
@@ -171,6 +258,55 @@ Exits: east (Vault of Vastness) or down (Waterfall Pool)
 Something stirs in the darkness.
 
 Exits: up (Luminous Gardens)
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2838">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. Rocks fall.
+You can't see the sky anymore!
+There is no way out.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large bare room.
+
+You can see AirDnD platemail, a vial of coffee, a wispy ghost, a giant rat and a trophy case (empty) here.
+
+Exits: east (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2839"></child>
+        </children>
+    </item>
+    <item nodeId="node-2839">
+        <command xml:space="preserve">swim</command>
+        <result xml:space="preserve">There's not enough water here for swimming.
+
+Exits: east (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2840"></child>
+        </children>
+    </item>
+    <item nodeId="node-2840">
+        <command xml:space="preserve">take platemail</command>
+        <result xml:space="preserve">Taken.
+
+Exits: east (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2841"></child>
+        </children>
+    </item>
+    <item nodeId="node-2841">
+        <command xml:space="preserve">wear platemail</command>
+        <result xml:space="preserve">You put on AirDnD platemail.
+
+Exits: east (Uncanny Lair)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -1052,7 +1188,7 @@ Stone walls, mildewed with glowing stuff, widen into a large bare room.
     </item>
     <item nodeId="node-1087">
         <command xml:space="preserve">i</command>
-        <result xml:space="preserve">You are empty-beaked.
+        <result xml:space="preserve">You are carrying nothing.
 
 Exits: down (Dungeon Entrance)
 
@@ -1068,15 +1204,18 @@ You can't see the sky anymore!
 There is no way out.
 
 Dungeon Entrance
-Stone walls, mildewed with glowing stuff, widen into a large bare room.
+Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall.
 
-You can see a diamond tiara, an AirDnD lanyard, a giant rat and a trophy case (empty) here.
+You can see AirDnD platemail, a giant rat and a trophy case (empty) here.
 
-Exits: west (Disturbing Hallway)
+Exits: down (Nasty Passage)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1093"></child>
+            <child nodeId="node-2879"></child>
+            <child nodeId="node-2828"></child>
+            <child nodeId="node-2859"></child>
             <child nodeId="node-1089"></child>
         </children>
     </item>
@@ -1120,6 +1259,204 @@ Exits: west (Disturbing Hallway)
   a diamond tiara
 
 Exits: west (Disturbing Hallway)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2859">
+        <command xml:space="preserve">take potion</command>
+        <result xml:space="preserve">Taken.
+
+Exits: east (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2860"></child>
+        </children>
+    </item>
+    <item nodeId="node-2860">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">removing west because you just came from there 
+
+Hall of Time
+A long, narrow hall, flickering with light from magefire sconces. The painted walls show the progression of time through planets and stars, sun and moons.
+
+Exits: south (Webby Corridor) or west (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2861"></child>
+        </children>
+    </item>
+    <item nodeId="node-2861">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">removing north because you just came from there 
+
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls. A brightly colored poster peeks out from beneath the webs.
+
+You can see a gelatinous cube here.
+
+Exits: north (Hall of Time) or south (Disturbing Hallway)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2862"></child>
+        </children>
+    </item>
+    <item nodeId="node-2862">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">removing north because you just came from there 
+
+Disturbing Hallway
+The angles here, the colors, the feel of the air -- just wrong. Horribly wrong.
+
+Exits: north (Webby Corridor) or down (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2863"></child>
+        </children>
+    </item>
+    <item nodeId="node-2863">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Nasty Passage
+A tight squeeze between damp and slimy boulders. There is blood on the ground.
+
+Exits: up (Disturbing Hallway) or down (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2864"></child>
+        </children>
+    </item>
+    <item nodeId="node-2864">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Jewelled Forest
+Marvellous columns march down the length of this immense cave. Jewel-like lights shine from deep within.
+
+You can see an AirDnD lanyard and a wispy ghost here.
+
+Exits: west (Luminous Gardens) or up (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2865"></child>
+        </children>
+    </item>
+    <item nodeId="node-2865">
+        <command xml:space="preserve">take lanyard</command>
+        <result xml:space="preserve">Taken.
+
+Exits: west (Luminous Gardens) or up (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2866"></child>
+        </children>
+    </item>
+    <item nodeId="node-2866">
+        <command xml:space="preserve">wear lanyard</command>
+        <result xml:space="preserve">you are wearing: AirDnD lanyard
+Exits: west (Luminous Gardens) or up (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2867"></child>
+        </children>
+    </item>
+    <item nodeId="node-2867">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: west (Luminous Gardens) or up (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2828">
+        <command xml:space="preserve">take lanyard</command>
+        <result xml:space="preserve">Taken.
+
+Exits: west (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2829"></child>
+        </children>
+    </item>
+    <item nodeId="node-2829">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying: 
+  an AirDnD lanyard
+
+Exits: west (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2830"></child>
+        </children>
+    </item>
+    <item nodeId="node-2830">
+        <command xml:space="preserve">wear lanyard</command>
+        <result xml:space="preserve">You put on the AirDnD lanyard.
+
+Exits: west (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2831"></child>
+        </children>
+    </item>
+    <item nodeId="node-2831">
+        <command xml:space="preserve">i</command>
+        <result xml:space="preserve">You are carrying: 
+  an AirDnD lanyard (worn on neck)
+
+Exits: west (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2879">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: down (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2880"></child>
+        </children>
+    </item>
+    <item nodeId="node-2880">
+        <command xml:space="preserve">take platemail</command>
+        <result xml:space="preserve">Taken.
+
+Exits: down (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2881"></child>
+        </children>
+    </item>
+    <item nodeId="node-2881">
+        <command xml:space="preserve">wear platemail</command>
+        <result xml:space="preserve">Equipment: AirDnD platemail Mod: 1
+Exits: down (Nasty Passage)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2882"></child>
+        </children>
+    </item>
+    <item nodeId="node-2882">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 4   Ferocity: 2   HP: 10/10 
+
+Exits: down (Nasty Passage)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2001,6 +2338,188 @@ Exits: north (Nasty Passage)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2833">
+        <command xml:space="preserve">help</command>
+        <result xml:space="preserve">Here's some basic commands you can use in play.
+
+You can "go" in all 8 directions (north, northeast, etc) as well as up and down. 
+ You can also take things, open things, sit on things, and stand up. 
+
+ look: shows you the description of the room you're in 
+ i:  lists what you are carrying or wearing. Short for "inventory"  
+ n: short for "go north" 
+ x: lets you examine something more closely 
+ x self: look at yourself 
+ honk, peck, flap, kill: Try them and see what happens! 
+ wear: put on a wearable object 
+ stats: shows your current strength, ferocity, and hit points
+ score: shows your current score 
+
+Exits: down (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2885"></child>
+            <child nodeId="node-2835"></child>
+        </children>
+    </item>
+    <item nodeId="node-2835">
+        <command xml:space="preserve">sing</command>
+        <result xml:space="preserve">That's not a verb I recognise.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2836"></child>
+        </children>
+    </item>
+    <item nodeId="node-2836">
+        <command xml:space="preserve">swim</command>
+        <result xml:space="preserve">Exits: down (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2885">
+        <command xml:space="preserve">score</command>
+        <result xml:space="preserve">You have so far scored 0 out of a possible 0, in 2 turns.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2886"></child>
+        </children>
+    </item>
+    <item nodeId="node-2886">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: down (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2887"></child>
+        </children>
+    </item>
+    <item nodeId="node-2887">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">The walls rumble. Rocks fall.
+You can't see the sky anymore!
+There is no way out.
+
+Dungeon Entrance
+Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall.
+
+You can see a giant rat and a trophy case (empty) here.
+
+Exits: east (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2888"></child>
+        </children>
+    </item>
+    <item nodeId="node-2888">
+        <command xml:space="preserve">peck rat</command>
+        <result xml:space="preserve">You viciously peck the giant rat, causing 9 points of damage!
+
+The giant rat trips and falls.
+"This isn't how things are supposed to go!" it whines, cringing.
+The giant rat drags itself off into the darkness.
+
+Exits: east (Uncanny Lair)
+
+[Your score has just gone up by one point.]
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2889"></child>
+        </children>
+    </item>
+    <item nodeId="node-2889">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: east (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2890"></child>
+        </children>
+    </item>
+    <item nodeId="node-2890">
+        <command xml:space="preserve">e</command>
+        <result xml:space="preserve">removing west because you just came from there 
+
+Uncanny Lair
+Oddly shaped bones are strewn about this rough cave. Some creature made a nest in one corner out of shredded fungus.
+
+You can see a vial of coffee here.
+
+Exits: south (Cavern of the Lake of Tears) or west (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2891"></child>
+        </children>
+    </item>
+    <item nodeId="node-2891">
+        <command xml:space="preserve">take coffee</command>
+        <result xml:space="preserve">Taken.
+
+Exits: south (Cavern of the Lake of Tears) or west (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2892"></child>
+        </children>
+    </item>
+    <item nodeId="node-2892">
+        <command xml:space="preserve">quaff vial</command>
+        <result xml:space="preserve">You feel mighty!
+
+Exits: south (Cavern of the Lake of Tears) or west (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2893"></child>
+        </children>
+    </item>
+    <item nodeId="node-2893">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 6   Ferocity: 2   HP: 10/10 
+
+Exits: south (Cavern of the Lake of Tears) or west (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2894"></child>
+        </children>
+    </item>
+    <item nodeId="node-2894">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">removing north because you just came from there 
+
+Cavern of the Lake of Tears
+A still, deep lake stretches into the distance. It's vast. You can't see the other side.
+
+You can see an AirDnD lanyard and a healing potion here.
+
+Exits: north (Uncanny Lair) or west (Rockslide Cavern)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2895"></child>
+        </children>
+    </item>
+    <item nodeId="node-2895">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">AirDnD lanyard: Taken.
+healing potion: Taken.
+
+Exits: north (Uncanny Lair) or west (Rockslide Cavern)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1160">
         <command xml:space="preserve">exits</command>
         <result xml:space="preserve">You can go down (Dungeon Entrance) from here.
@@ -2211,18 +2730,18 @@ Webby Corridor
     </item>
     <item nodeId="node-1178">
         <command xml:space="preserve">d</command>
-        <result xml:space="preserve">The walls rumble. Rocks fall.
+        <result xml:space="preserve">Hissing a little, you peer from side to side.
+
+The walls rumble. Rocks fall.
 You can't see the sky anymore!
 There is no way out.
 
-The number of viable directions is 0.
-
 Dungeon Entrance
-Stone walls, mildewed with glowing stuff, widen into a large bare room.
+Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall.
 
-You can see an AirDnD headlamp, a giant rat and a trophy case (empty) here.
+You can see an AirDnD lanyard, a healing potion, a gelatinous cube, a giant rat and a trophy case (empty) here.
 
-Exits: west (Disturbing Hallway)
+Exits: west (Webby Corridor)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -2236,6 +2755,7 @@ Exits: west (Disturbing Hallway)
             <child nodeId="node-1583"></child>
             <child nodeId="node-1578"></child>
             <child nodeId="node-1573"></child>
+            <child nodeId="node-2844"></child>
             <child nodeId="node-1434"></child>
             <child nodeId="node-1433"></child>
             <child nodeId="node-1429"></child>
@@ -2254,6 +2774,7 @@ Exits: west (Disturbing Hallway)
             <child nodeId="node-1278"></child>
             <child nodeId="node-2367"></child>
             <child nodeId="node-1255"></child>
+            <child nodeId="node-2870"></child>
             <child nodeId="node-1244"></child>
             <child nodeId="node-1179"></child>
         </children>
@@ -3527,6 +4048,94 @@ Exits: south or up
         <result xml:space="preserve">
 Den of Darkness
 Exits: north or down
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2870">
+        <command xml:space="preserve">take vial</command>
+        <result xml:space="preserve">Taken.
+
+worn: Exits: south (Jewelled Forest)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2871"></child>
+        </children>
+    </item>
+    <item nodeId="node-2871">
+        <command xml:space="preserve">s</command>
+        <result xml:space="preserve">removing north because you just came from there 
+
+Jewelled Forest
+Marvellous columns march down the length of this immense cave. Jewel-like lights shine from deep within.
+
+You can see a confused adventurer here.
+
+worn: Exits: north (Dungeon Entrance) or down (Chilly Mausoleum)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2872"></child>
+        </children>
+    </item>
+    <item nodeId="node-2872">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Chilly Mausoleum
+Cold seeps into your bones. Faceless tombs loom overhead. A tacky orange and green painting hangs on the wall.
+
+You can see a vial of coffee here.
+
+worn: Exits: up (Jewelled Forest) or down (Webby Corridor)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2873"></child>
+        </children>
+    </item>
+    <item nodeId="node-2873">
+        <command xml:space="preserve">take vial</command>
+        <result xml:space="preserve">Taken.
+
+worn: Exits: up (Jewelled Forest) or down (Webby Corridor)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2874"></child>
+        </children>
+    </item>
+    <item nodeId="node-2874">
+        <command xml:space="preserve">d</command>
+        <result xml:space="preserve">
+Webby Corridor
+Dusty ropes of thick spiderweb festoon the walls. A brightly colored poster peeks out from beneath the webs.
+
+You can see an AirDnD lanyard, a healing potion and a tentacled horror here.
+
+worn: Exits: south (Den of Darkness) or up (Chilly Mausoleum)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2875"></child>
+        </children>
+    </item>
+    <item nodeId="node-2875">
+        <command xml:space="preserve">take lanyard</command>
+        <result xml:space="preserve">Taken.
+
+worn: Exits: south (Den of Darkness) or up (Chilly Mausoleum)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2876"></child>
+        </children>
+    </item>
+    <item nodeId="node-2876">
+        <command xml:space="preserve">wear lanyard</command>
+        <result xml:space="preserve">You put on the AirDnD lanyard.
+
+worn: AirDnD lanyardExits: south (Den of Darkness) or up (Chilly Mausoleum)
+
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
@@ -6714,13 +7323,13 @@ Exits: south (Hall of Time) or up (Den of Darkness) or down (Evil Archives)
     <item nodeId="node-1352">
         <command xml:space="preserve">peck rat</command>
         <result xml:space="preserve">You viciously peck the giant rat, causing 3 points of damage!
-You viciously peck the giant rat, causing 7 points of damage!
+You viciously peck the giant rat, causing 3 points of damage!
 
-The giant rat leaps back in shock.
-"I went to Monster Polytechnic for this?" it whines, cringing.
+The giant rat trips and falls.
+"This isn't how things are supposed to go!" it shrieks.
 The giant rat drags itself off into the darkness.
 
-Exits: east (Disturbing Hallway)
+Exits: down (Rockslide Cavern)
 
 [Your score has just gone up by one point.]
 
@@ -11185,15 +11794,20 @@ Exits: west (Chamber of Lights) or up (Den of Darkness)
     </item>
     <item nodeId="node-1411">
         <command xml:space="preserve">d</command>
-        <result xml:space="preserve">You can't go that way.
+        <result xml:space="preserve">
+Rockslide Cavern
+Boulders have tumbled down on one side of this cave. It's a tight squeeze to get by them.
 
-Exits: north (Luminous Gardens)
+You can see an AirDnD lanyard here.
+
+Exits: west (Evil Archives) or up (Dungeon Entrance)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
         <children><child nodeId="node-1787"></child>
             <child nodeId="node-1420"></child>
             <child nodeId="node-1412"></child>
+            <child nodeId="node-2899"></child>
             <child nodeId="node-2094"></child>
         </children>
     </item>
@@ -11655,6 +12269,120 @@ A peaceful, secluded little beach, just the right size for a dungeon-going goose
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Shorehaven
 A peaceful, secluded little beach, just the right size for a dungeon-going goose. A good place to tuck your head under your wing for a short nap. Or you can swim out into the lake.
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2899">
+        <command xml:space="preserve">take lanyard</command>
+        <result xml:space="preserve">Taken.
+
+Exits: west (Evil Archives) or up (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2900"></child>
+        </children>
+    </item>
+    <item nodeId="node-2900">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 2   HP: 10/10 
+
+Exits: west (Evil Archives) or up (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2901"></child>
+        </children>
+    </item>
+    <item nodeId="node-2901">
+        <command xml:space="preserve">wear lanyard</command>
+        <result xml:space="preserve">Exits: west (Evil Archives) or up (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2902"></child>
+        </children>
+    </item>
+    <item nodeId="node-2902">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 3   Ferocity: 3   HP: 10/10 
+
+Exits: west (Evil Archives) or up (Dungeon Entrance)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2903"></child>
+        </children>
+    </item>
+    <item nodeId="node-2903">
+        <command xml:space="preserve">w</command>
+        <result xml:space="preserve">removing east because you just came from there 
+
+Evil Archives
+Row upon row of moldering tomes, dust, and a sense of forboding fill this underground library.
+
+Exits: north (Cavern of the Lake of Tears) or east (Rockslide Cavern)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2904"></child>
+        </children>
+    </item>
+    <item nodeId="node-2904">
+        <command xml:space="preserve">n</command>
+        <result xml:space="preserve">removing south because you just came from there 
+
+Cavern of the Lake of Tears
+A still, deep lake stretches into the distance. It's vast. You can't see the other side.
+
+You can see an AirDnD headlamp and a gelatinous cube here.
+
+Exits: south (Evil Archives) or down (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2905"></child>
+        </children>
+    </item>
+    <item nodeId="node-2905">
+        <command xml:space="preserve">take all</command>
+        <result xml:space="preserve">AirDnD headlamp: Taken.
+
+Exits: south (Evil Archives) or down (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2906"></child>
+        </children>
+    </item>
+    <item nodeId="node-2906">
+        <command xml:space="preserve">wear headlamp</command>
+        <result xml:space="preserve">Exits: south (Evil Archives) or down (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2907"></child>
+        </children>
+    </item>
+    <item nodeId="node-2907">
+        <command xml:space="preserve">stats</command>
+        <result xml:space="preserve">Strength: 4   Ferocity: 3   HP: 10/10 
+
+Exits: south (Evil Archives) or down (Hall of Time)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2908"></child>
+        </children>
+    </item>
+    <item nodeId="node-2908">
+        <command xml:space="preserve">x self</command>
+        <result xml:space="preserve">You crane your long, graceful neck to look back. 
+White, muscular, hefty, feathered. 
+Yes, you're still a fabulous goose!
+
+Exits: south (Evil Archives) or down (Hall of Time)
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
@@ -15105,6 +15833,26 @@ Exits: south (Jewelled Forest) or west (Uncanny Lair)
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
     </item>
+    <item nodeId="node-2844">
+        <command xml:space="preserve">look sign</command>
+        <result xml:space="preserve">A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, "Welcome to your new Dungeon away from Home! Let AirDnD be your guide as we bring you to new depths in Adventuring!
+
+Exits: south (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2849"></child>
+        </children>
+    </item>
+    <item nodeId="node-2849">
+        <command xml:space="preserve">read sign</command>
+        <result xml:space="preserve">A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, "Welcome to your new Dungeon away from Home! Let AirDnD be your guide as we bring you to new depths in Adventuring!
+
+Exits: south (Uncanny Lair)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
     <item nodeId="node-1573">
         <command xml:space="preserve">l</command>
         <result xml:space="preserve">Dungeon Entrance
@@ -17756,7 +18504,8 @@ You can go up (Magnificent ruins) from here.
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>
-        <children><child nodeId="node-1737"></child>
+        <children><child nodeId="node-2824"></child>
+            <child nodeId="node-1737"></child>
         </children>
     </item>
     <item nodeId="node-1737">
@@ -17771,6 +18520,22 @@ Stone walls, mildewed with glowing stuff, widen into a large bare room.
 You can see a wispy ghost, a diamond tiara and a giant rat here.
 
 Exits: west (Evil Archives)
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+    </item>
+    <item nodeId="node-2824">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
+
+&gt;</result>
+        <commentary xml:space="preserve"></commentary>
+        <children><child nodeId="node-2825"></child>
+        </children>
+    </item>
+    <item nodeId="node-2825">
+        <command xml:space="preserve"></command>
+        <result xml:space="preserve">I beg your pardon?
 
 &gt;</result>
         <commentary xml:space="preserve"></commentary>

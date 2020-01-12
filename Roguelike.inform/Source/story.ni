@@ -7,6 +7,8 @@ When play begins:
     now the right hand status line is
         "[the player's surroundings]";
     now the left hand status line is "[number of visited rooms]/[number of rooms] rooms / [score] points ";
+	say "It's a beautiful day in the dungeon, and you are a horrible goose.";
+	say "Try typing 'help' if you aren't sure how to play.";
 
 Part 1 - Some rules for mapping
 
@@ -24,9 +26,8 @@ A room has a number called tours.
 
 Mysterious ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
-Carry out going to a visited room:
-	say "You're going to a VISITED room.[line break]";
-	continue the action;
+Carry out going:
+	say "[one of]You waddle valiantly forth.[or]Your broad foot webs slappity-slap across the dungeon floor.[or]Grimly, you forge ever onward, tail waggling.[or]Hissing a little, you peer from side to side.[or]Grunting with effort, you clamber over the rocky floor.[or]Your beady-eyed glance darts across yet another corridor.[or]Attempting stealth, you stretch out your long and graceful neck.[purely at random]";
 	
 
 After going to a room (called the source):
@@ -181,11 +182,11 @@ Instead of swimming:
 		let reverse be the opposite of the way;
 		change the reverse exit of nextroom to the location of the player;
 		now Cavern of the Lake of Tears is unpicked;
-	continue the action;
-		[if the location of the player is Cavern of the Lake of Tears:
-			now Shorehaven is mapped west of Cavern of the Lake of Tears;
-			say "You notice a little beach to the west.";
-			stop the action.]
+		continue the action;
+	otherwise:
+		say "There's not enough water here for swimming.";
+		stop the action.
+
 		
 [maybe implement fly or levitate from potions]
 
@@ -262,7 +263,7 @@ Carry out listing equipment:
 	say "You are wearing: [line break]";
 	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
 	
-Instead of taking inventory: 
+[Instead of taking inventory: 
 	if the number of things enclosed by the player is 0, say "You are empty-beaked." instead; 
 	if the player carries something: 
 		now all things enclosed by the player are unmarked for listing; 
@@ -273,10 +274,56 @@ Instead of taking inventory:
 		now all things enclosed by the player are unmarked for listing; 
 		now all things worn by the player are marked for listing; 
 		say "You are wearing: [line break]"; 
-		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.
+		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.]
+
+
+[Adds taglines to your inventory for particular things] 		
+The print standard inventory rule is not listed in any rulebook. 		
+Carry out taking inventory (this is the new print inventory rule):
+	say "You are carrying: [line break]";
+	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
+
+After printing the name of something (called target) while taking inventory:
+    follow the property-aggregation rules for the target. 
+
+The property-aggregation rules are an object-based rulebook.
+The property-aggregation rulebook has a list of text called the tagline. 
+
+A first property-aggregation rule for an openable open thing (this is the mention open openables rule):
+        add "open" to the tagline. 
+
+A first property-aggregation rule for an openable closed thing (this is the mention closed openables rule):
+        add "closed" to the tagline. 
+
+A property-aggregation rule for a closed transparent container which contains nothing (this is the mention empty transparent containers rule):
+        add "empty" to the tagline. 
+
+A property-aggregation rule for an open container which contains nothing (this is the mention empty open containers rule):
+        add "empty" to the tagline. 
+
+A property-aggregation rule for a lit thing (this is the mention lit objects rule):
+        add "providing light" to the tagline. 
+
+A property-aggregation rule for a switched on device (this is the mention devices rule):
+        add "switched on" to the tagline. 
+
+A property-aggregation rule for an object that is worn by the player (this is the mention worn objects rule):
+	add "worn on [slot]" to the tagline.
+
+A property-aggregation rule for a weapon:
+	add "wielded" to the tagline.
+	
+The last property-aggregation rule (this is the print aggregated properties rule):
+	if the number of entries in the tagline is greater than 0:
+		say " ([tagline])";
+		rule succeeds;
+	rule fails. 
+
 
 
 Equipment is a kind of thing. Equipment is usually wearable. Equipment has some text called the slot. Equipment has a number called the modifier. Equipment has some text called the stat. 
+
+A weapon is a kind of thing. 
 
 A potion is a kind of edible thing. A potion has a number called mana.
 
@@ -284,6 +331,22 @@ A healing potion is a potion. [The mana of a healing potion is 3. ]
 A vial of coffee is a potion. 
 
 A diamond tiara, an AirDnD headlamp, an AirDnD lanyard, an amulet of awesome, AirDnD platemail, and glittering chainmail are equipment. 
+
+After wearing equipment (called E):
+	let M be the modifier of E;
+	if the stat of E is "ferocity":
+		increase the ferocity of the player by M;
+	if the stat of E is "strength":
+		increase the strength of the player by M;
+	
+After taking off equipment (called E):
+	let M be the modifier of E;
+	if the stat of E is "ferocity":
+		decrease the ferocity of the player by M;
+	if the stat of E is "strength":
+		decrease the strength of the player by M;
+		
+
 
 Table of Bad Equipment
 equipment	slot	modifier	stat	description
@@ -294,7 +357,7 @@ AirDnD platemail	"body"	1	"strength"	"Cardboard covered with tinfoil, printed wi
 
 Table of Good Equipment
 equipment	slot	modifier	stat	description
-diamond tiara	"head"	10	"ferocity"	"Ice, fire, and steel."	
+diamond tiara	"head"	10	"ferocity"	"Ice, fire, and steel."
 glittering chainmail	"body"	3	"strength"	"Tough, sleek titanium armor."
 amulet of awesome	"neck"	3	"strength"	"A golden amulet that spells out the word 'AWESOME' in flowing script."
 
@@ -319,7 +382,7 @@ After eating a vial of coffee:
 Understand "drink [potion]"  and "quaff [potion]" as eating.
 	
 
-	
+
 
 
 Part 4 - Combat system
@@ -385,22 +448,20 @@ A creature is a kind of person.  A creature is either working or striking. A cre
 
 A creature is either awake or asleep. A creature is usually awake. 
 
-A spider is a creature. 
-A grumpy kobold is a creature. 
-A gelatinous cube is a creature. 
-A cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, a confused adventurer, and an iridium bat are creatures.
+A spider, a giant rat, a grumpy kobold, a gelatinous cube, a cave snake, a glowering elf, a tentacled horror, a soot sprite, a lumbering mummy, a wispy ghost, a confused adventurer, and an iridium bat are creatures.
 
-Assigning stats is an action applying to one thing. 
+Assigning attributes is an action applying to one thing. 
 
 When play begins:
-	assign stats;
+	assign attributes;
 	
-To assign stats:
+To assign attributes:
 	repeat through the Table of Mobs:
 		now the max hp of the creature entry is max hp entry;
 		now the current hp of the creature entry is current hp entry;
 		now the strength of the creature entry is strength entry;
 		now the ferocity of the creature entry is ferocity entry;
+		now the description of the creature entry is "It looks [description entry].";
 	repeat through the Table of Magical Consumables:
 		now the mana of the potion entry is mana entry;
 	repeat through the Table of Bad Equipment:
@@ -418,22 +479,22 @@ To assign stats:
 
 A rainbow dragon is a creature. The max hp of a rainbow dragon is 40. The current hp of a rainbow dragon is 40. The strength of a rainbow dragon is 3. The ferocity of a rainbow dragon is 3. A rainbow dragon is asleep. The description of a rainbow dragon is "Iridescent scales armor this enormous [if the dragon is asleep]sleeping [end if]dragon.";
 
-A giant rat is a creature. It is in Dungeon Entrance.
-The max hp of the giant rat is 5. The current hp of the giant rat is 5. The strength of a giant rat is 1. The ferocity of a giant rat is 1.
+
 
 Table of Mobs
-creature	max hp	current hp	strength	ferocity
-spider	15	15	1	1
-grumpy kobold	20	20	1	1
-gelatinous cube	25	25	3	1
-cave snake	12	12	2	1
-iridium bat	15	15	3	1
-glowering elf	25	25	3	2
-tentacled horror	30	30	4	2
-soot sprite	8	8	1	1
-lumbering mummy	15	15	2	1
-confused adventurer	25	25	2	1
-wispy ghost	12	12	2	1
+creature	max hp	current hp	strength	ferocity	description
+giant rat	5	5	1	1	"like a pushover"
+spider	15	15	1	1	"a delicious little bug"
+grumpy kobold	20	20	1	1	"pretty tough for its size"
+gelatinous cube	25	25	3	1	"formidible"
+cave snake	12	12	2	1	"like it needs its butt kicked"
+iridium bat	15	15	3	1	"fierce and fangy"		
+glowering elf	25	25	3	2	"combat-ready"
+tentacled horror	30	30	4	2	"terrifying"
+soot sprite	8	8	1	1	"ridiculous"
+lumbering mummy	15	15	2	1	"tattered and clumsy"
+confused adventurer	25	25	2	1	"battle-hardened"
+wispy ghost	12	12	2	1	"barely even there"
 
 
 
@@ -447,9 +508,11 @@ After going from Mysterious ruins:
 	now Mysterious Ruins is mapped up of nowhere;
 	continue the action;
 
-Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large bare room."
+Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall."
 
 A trophy case is in Dungeon Entrance. It is a container. It is fixed in place. The description of a trophy case is "An enormous marble trophy case. The front is carved with the motto, 'Vae victis'".
+
+A welcome sign is scenery in Dungeon Entrance. The description of a welcome sign is "A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, 'Welcome to your new Dungeon Away From Home! Let AirDnD be your Guide, as we bring you to new depths in Adventuring!"
 
 
 
@@ -482,9 +545,13 @@ An inscription is scenery in Glittering Shrine. The description is "It says, in 
 Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
 
 
-Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls."
+Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls. A brightly colored poster peeks out from beneath the webs."
 
-Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern."
+A poster is scenery in Webby Corridor. The description of a poster is "A color painting of a sad looking gnome with a terrible haircut. Above the painting are glowing words, 'MONSTER OF THE MONTH: Dnifter the Bald!' And under it, 'Congrats to our newest Associate Assassin! *AirDnD*'"
+
+Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern. An orange and green motto, made of eerie light, floats in the air."
+
+A motto is scenery in Chamber of Lights. The description of a motto is "Fancy calligraphy that says, 'Beat, Slay, Shove. *AirDnD* Your Dungeon Away From Home.' ";
 
 Disturbing Hallway is a room. "The angles here, the colors, the feel of the air -- just wrong. Horribly wrong."
 
@@ -492,7 +559,7 @@ Waterfall Cave is a room. "Water pours down from high above, catching on stalact
 
 A pool is in Waterfall Cave. It is scenery.
 
-Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall."
+Marble Halls is a room. "White flowstone gleams in thick curtains on the walls of this magnificent hall. "
 
 
 
@@ -510,7 +577,9 @@ Luminous Gardens is a room. The description is "Mushrooms the size of trees, glo
 Nasty Passage is a room. The description is "A tight squeeze between damp and slimy boulders. There is blood on the ground."
 
 
-Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead."
+Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead. A tacky orange and green painting hangs on the wall."
+
+A painting is scenery in Chilly Mausoleum. The description of a painting is "A clumsily painted skull over crossed, bloody swords, with gothic lettering that reads, 'See something? Slay something! *AirDnD*"
 
 The Hall of Time is a room. The description is "A long, narrow hall, flickering with light from magefire sconces. The painted walls show the progression of time through planets and stars, sun and moons."
 
@@ -521,15 +590,33 @@ Vault of Vastness is a room. It is picked. The description is "Soaring arches ov
 
 Part 7 - Objects
 
-
-
-
-[TODO: Implement potions]
-[TODO: Implement wearables]
+[TODO: move object stuff here]
 [TODO: Implement wieldable weapons]
 
+Part 8 - Scoring
+[TODO: Add in a score command that shows what you have done and what you have left]
 
-Part 8 - Score
 
-[add in a score for creatures striking]
+Part 9 - Help system
 
+A thing can be examined or unexamined. A thing is usually unexamined. Carry out examining something: now the noun is examined. 
+
+Taking inventory is acting confused. Looking is acting confused. Examining an examined thing is acting confused. 
+
+After acting confused for four turns:
+        say "(If you are feeling lost, try typing 'help' for suggestions.)" 
+
+
+Understand "help" as summoning help. Summoning help is an action applying to nothing. 
+
+Carry out summoning help:
+	say "Here's some basic commands you can use in play.[paragraph break]";
+	say "You can 'go' in all 8 directions (north, northeast, etc) as well as up and down. [line break] You can also take things, open things, sit on things, and stand up. 'take all' will pick up everything possible in a room.[paragraph break] look: shows you the description of the room you're in [line break]
+i:  lists what you are carrying or wearing. Short for 'inventory'  [line break]
+n: short for 'go north' [line break]
+x: lets you examine something more closely [line break]
+x self: look at yourself [line break]
+honk, peck, flap, kill: Try them and see what happens! [line break]
+wear: put on a wearable object [line break]
+stats: shows your current strength, ferocity, and hit points[line break]
+score: shows your current score [line break]"
