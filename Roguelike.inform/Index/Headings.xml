@@ -39,70 +39,70 @@
     </dict>
     <key>5</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>143</integer>
+        <key>Line</key><integer>169</integer>
         <key>Title</key><string>Part 2 - Our friend Goose</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>6</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>145</integer>
+        <key>Line</key><integer>171</integer>
         <key>Title</key><string>Section 1 - Stats</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>7</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>161</integer>
+        <key>Line</key><integer>187</integer>
         <key>Title</key><string>Section 2 - Things a goose can do</string>
         <key>Level</key><integer>5</integer>
         <key>Indentation</key><integer>2</integer>
     </dict>
     <key>8</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>256</integer>
+        <key>Line</key><integer>282</integer>
         <key>Title</key><string>Part 3 - Wearing and wielding</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>9</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>388</integer>
+        <key>Line</key><integer>401</integer>
         <key>Title</key><string>Part 4 - Combat system</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>10</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>445</integer>
+        <key>Line</key><integer>458</integer>
         <key>Title</key><string>Part 5 - NPCs</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>11</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>501</integer>
+        <key>Line</key><integer>514</integer>
         <key>Title</key><string>Part 6 - Locations</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>12</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>591</integer>
+        <key>Line</key><integer>603</integer>
         <key>Title</key><string>Part 7 - Objects</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>13</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>596</integer>
+        <key>Line</key><integer>608</integer>
         <key>Title</key><string>Part 8 - Scoring</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>
     </dict>
     <key>14</key><dict>
         <key>Filename</key><string>/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Source/story.ni</string>
-        <key>Line</key><integer>600</integer>
+        <key>Line</key><integer>612</integer>
         <key>Title</key><string>Part 9 - Help system</string>
         <key>Level</key><integer>3</integer>
         <key>Indentation</key><integer>1</integer>

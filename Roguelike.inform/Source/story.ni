@@ -27,7 +27,7 @@ A room has a number called tours.
 Mysterious ruins is a room. It is picked. The description is "Stone crumbles in a blasted wasteland. Grey, twisted trees grow from crevices in the walls. A narrow staircase descends into darkness. "
 
 Carry out going:
-	say "[one of]You waddle valiantly forth.[or]Your broad foot webs slappity-slap across the dungeon floor.[or]Grimly, you forge ever onward, tail waggling.[or]Hissing a little, you peer from side to side.[or]Grunting with effort, you clamber over the rocky floor.[or]Your beady-eyed glance darts across yet another corridor.[or]Attempting stealth, you stretch out your long and graceful neck.[purely at random]";
+	say "[one of]You waddle valiantly forth.[or]Your broad foot webs slappity-slap across the dungeon floor.[or]Grimly, you forge ever onward, tail waggling.[or]Hissing a little, you peer from side to side.[or]Grunting with effort, you clamber over the rocky floor.[or]Your beady-eyed glance darts across yet another corridor.[or]Attempting stealth, you stretch out your long and graceful neck.[or]You waddle on, nonchalant.[or]Owning that dungeon, lord of all you survey.[purely at random]";
 	
 
 After going to a room (called the source):
@@ -51,7 +51,7 @@ After going to a room (called the source):
 					repeat with way running through available directions:
 						let place be the room way from the location;
 						if place is a room:
-							say "removing [way] because you just came from there [line break]";
+							[say "removing [way] because you just came from there [line break]";]
 							now way is not available;
 				[say "available directions: [list of available directions][line break]";]
 				let nextdir be a random available direction (called way);  
@@ -112,13 +112,39 @@ Every turn:
 				increment count;			
 				say "[if count is greater than 1] or [end if][way] ([place])";
 		say "[line break]"; 
-		if the number of creatures in the Vault of Vastness is greater than 5 and the rainbow dragon is awake and the dragon is not in the Vault of Vastness:
-			say "The dragon stands up, shaking the floor with its vast bulk.";
-			say "It says, 'You're pretty tough for a goose. Follow me.'";
-			say "The dragon mutters a spell. You are sucked into a magical portal!";
-			now the dragon is in the Vault of Vastness;
-			now the player is in the Vault of Vastness;
-			continue the action;
+	if the player is in the location of a dragon and the dragon is awake and the player is wearing a lanyard or the player is wearing platemail or the player is wearing a headlamp:
+		say "The dragon glares at you.";
+		say "It growls, 'Creature of the Outerlands!";
+		say "'Renounce the evil AirDnD Overlords!!'";
+		say "'Cast off your tacky, ridiculously branded garments! ";
+		say "What are you, a waddling billboard, or a warrior?";
+		say "Join our glorious Union!";
+	if the number of creatures in the Vault of Vastness is greater than 6 and the rainbow dragon is awake and the dragon is not in the Vault of Vastness and the player is not wearing a lanyard and the player is not wearing platemail and the player is not wearing a headlamp:
+		say "The dragon stands up, shaking the floor with its vast bulk.";
+		say "It says, 'Yeah, OK, I have to hand it to you. Follow me.'";
+		say "The dragon mutters a spell. You are sucked into a magical portal!";
+		now the dragon is in the Vault of Vastness;
+		now the player is in the Vault of Vastness;
+		continue the action;
+	if the number of creatures in the Vault of Vastness is less than 7 and the rainbow dragon is awake and the dragon is not in the Vault of Vastness:
+		say "The dragon looks you up and down and sighs heavily.";
+		say "'You look tough, and I've heard good things.";
+		say "'But I need more proof of your worth. Go back and keep fighting.";
+		say "The dragon falls back asleep, twitching lazily.";	
+	if the player is in the Vault of Vastness:
+		say "You look around. The assembled creatures are waving union placards and megaphones! They're stomping on torn, bloody AirDnD motivational posters and timesheets!";
+		say "The dragon hands you a diamond tiara!";
+		now the diamond tiara is carried by the player;
+		say "'Magnificent, Powerful Goose!' says the dragon.";
+		say "We'd like to elect you Leader of the Dungeon Monster's Union!";
+		say "Everyone cheers lustily!! [paragraph break]";
+		say "Congratulations. By defeating the oppressed, underpaid, gig-worker monsters of this realm, you have inspired them to unionize!";
+		say "You settle happily into your new role as Boss Monster of the Dungeon with your new friends and comrades. May you defeat many adventurers in future days!";
+		say "THE END.";
+
+
+			
+				
 
 
 	
@@ -263,19 +289,6 @@ Carry out listing equipment:
 	say "You are wearing: [line break]";
 	list the contents of the player, with newlines, indented, including contents, with extra indentation. 
 	
-[Instead of taking inventory: 
-	if the number of things enclosed by the player is 0, say "You are empty-beaked." instead; 
-	if the player carries something: 
-		now all things enclosed by the player are unmarked for listing; 
-		now all things carried by the player are marked for listing; 
-		say "You are carrying: [line break]"; 
-		list the contents of the player, with newlines, indented, giving inventory information, including contents, with extra indentation, listing marked items only; 
-	if the player wears something: 
-		now all things enclosed by the player are unmarked for listing; 
-		now all things worn by the player are marked for listing; 
-		say "You are wearing: [line break]"; 
-		list the contents of the player, with newlines, indented, including contents, with extra indentation, listing marked items only.]
-
 
 [Adds taglines to your inventory for particular things] 		
 The print standard inventory rule is not listed in any rulebook. 		
@@ -483,12 +496,12 @@ A rainbow dragon is a creature. The max hp of a rainbow dragon is 40. The curren
 
 Table of Mobs
 creature	max hp	current hp	strength	ferocity	description
-giant rat	5	5	1	1	"like a pushover"
+giant rat	5	5	1	1	"like a pushover. Peck it."
 spider	15	15	1	1	"a delicious little bug"
 grumpy kobold	20	20	1	1	"pretty tough for its size"
 gelatinous cube	25	25	3	1	"formidible"
 cave snake	12	12	2	1	"like it needs its butt kicked"
-iridium bat	15	15	3	1	"fierce and fangy"		
+iridium bat	15	15	3	1	"fierce and fangy"	
 glowering elf	25	25	3	2	"combat-ready"
 tentacled horror	30	30	4	2	"terrifying"
 soot sprite	8	8	1	1	"ridiculous"
@@ -508,12 +521,11 @@ After going from Mysterious ruins:
 	now Mysterious Ruins is mapped up of nowhere;
 	continue the action;
 
-Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large cold room. A sign is on the wall."
+Dungeon Entrance is down from Mysterious Ruins. The description is "Stone walls, mildewed with glowing stuff, widen into a large cold room. [paragraph break]A large, colorful sign is on the wall."
 
 A trophy case is in Dungeon Entrance. It is a container. It is fixed in place. The description of a trophy case is "An enormous marble trophy case. The front is carved with the motto, 'Vae victis'".
 
-A welcome sign is scenery in Dungeon Entrance. The description of a welcome sign is "A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, 'Welcome to your new Dungeon Away From Home! Let AirDnD be your Guide, as we bring you to new depths in Adventuring!"
-
+A welcome sign is scenery in Dungeon Entrance. The description of a welcome sign is "A glossy sign in bright orange and virulent green, with a stylized picture of a sword on a pile of money. It says, 'Welcome to your new Dungeon Away From Home! Let AirDnD be your Guide, as we bring you to new depths in Adventuring! *AirDnD*"
 
 
 Jewelled Forest is a room. "Marvellous columns march down the length of this immense cave. Jewel-like lights shine from deep within."
@@ -545,11 +557,11 @@ An inscription is scenery in Glittering Shrine. The description is "It says, in 
 Vault of Secrets is a room. It is picked. The description is "Stone doors swing open. A vault full of shadows and agony lies before you."
 
 
-Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls. A brightly colored poster peeks out from beneath the webs."
+Webby Corridor is a room. The description is "Dusty ropes of thick spiderweb festoon the walls. [line break]A brightly colored poster peeks out from beneath the webs."
 
-A poster is scenery in Webby Corridor. The description of a poster is "A color painting of a sad looking gnome with a terrible haircut. Above the painting are glowing words, 'MONSTER OF THE MONTH: Dnifter the Bald!' And under it, 'Congrats to our newest Associate Assassin! *AirDnD*'"
+A poster is scenery in Webby Corridor. The description of a poster is "A color painting of a sad looking gnome with a terrible haircut. Above the painting are glowing words, 'MONSTER OF THE MONTH: Dnifter the Half-Bald!' And under it, 'Congrats to our newest Associate Assassin! *AirDnD*'"
 
-Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern. An orange and green motto, made of eerie light, floats in the air."
+Chamber of Lights is a room. The description is "An uncanny mottled glow emanates from the walls of this high-ceilinged cavern. [line break]An orange and green motto, made of eerie light, floats in the air."
 
 A motto is scenery in Chamber of Lights. The description of a motto is "Fancy calligraphy that says, 'Beat, Slay, Shove. *AirDnD* Your Dungeon Away From Home.' ";
 
@@ -577,7 +589,7 @@ Luminous Gardens is a room. The description is "Mushrooms the size of trees, glo
 Nasty Passage is a room. The description is "A tight squeeze between damp and slimy boulders. There is blood on the ground."
 
 
-Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead. A tacky orange and green painting hangs on the wall."
+Chilly Mausoleum is a room. The description is "Cold seeps into your bones. Faceless tombs loom overhead. [line break]A tacky orange and green painting hangs on the wall."
 
 A painting is scenery in Chilly Mausoleum. The description of a painting is "A clumsily painted skull over crossed, bloody swords, with gothic lettering that reads, 'See something? Slay something! *AirDnD*"
 
