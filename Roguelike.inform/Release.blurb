@@ -13,8 +13,8 @@ release to "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Release"
 storyfile leafname "Roguelike Goose.gblorb"
 storyfile "/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Build/output.ulx" include
 ifiction "/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Metadata.iFiction" include
-cover "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
-picture 1 "/Applications/Inform.app/Contents/Resources/Internal/Miscellany/Cover.jpg"
+cover "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Cover.jpg"
+picture 1 "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Cover.jpg"
 
 ! Placeholder variables
 
@@ -22,14 +22,30 @@ placeholder [IFID] = "5C77C549-2202-4BFB-B5EC-157B2DB3EA2F"
 placeholder [RELEASE] = "1"
 placeholder [YEAR] = "2020"
 placeholder [TITLE] = "Roguelike Goose"
-placeholder [AUTHOR] = "lizzard"
-placeholder [BLURB] = "A work of interactive fiction."
+placeholder [AUTHOR] = "Lizzard"
+placeholder [BLURB] = "It's a beautiful day in the dungeon, and you are a horrible goose."
 
 ! Other material to release
 
-status alternative ||Using 'Release along with cover art', to provide something more distinctive than the default artwork above&nbsp;<a href=inform:/doc403.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with a website'&nbsp;<a href=inform:/doc405.html><img border=0 src=inform:/doc_images/help.png></a>||
-status alternative ||Using 'Release along with an interpreter', for in-browser play on your website&nbsp;<a href=inform:/doc406.html><img border=0 src=inform:/doc_images/help.png></a>||
+
+! Website instructions
+
+placeholder [ENCODEDSTORYFILE] = "Roguelike Goose.gblorb.js"
+template path "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Templates"
+template path "/Users/ehenry/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+placeholder [INTERPRETERSCRIPTS] = " "
+interpreter "Quixe" "g"
+base64 "/Users/ehenry/dev/inform7/roguelike/Roguelike.inform/Build/output.ulx" to "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Release/interpreter/Roguelike Goose.gblorb.js"
+
+! Website instructions
+
+template path "/Users/ehenry/dev/inform7/roguelike/Roguelike.materials/Templates"
+template path "/Users/ehenry/Library/Inform/Templates"
+template path "/Applications/Inform.app/Contents/Resources/Internal/Templates"
+css
+website "Standard"
+status instruction ||&nbsp;<a href="source:story.ni#line14"><img border=0 src=inform:/doc_images/Reveal.tif></a>||
 status alternative ||Using 'Release along with a file of "Such-and-Such" called "whatever.pdf"', perhaps to add a manual, or a welcoming note&nbsp;<a href=inform:/doc401.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with the source text'&nbsp;<a href=inform:/doc412.html><img border=0 src=inform:/doc_images/help.png></a>||
 status alternative ||Using 'Release along with a solution'&nbsp;<a href=inform:/doc411.html><img border=0 src=inform:/doc_images/help.png></a>||

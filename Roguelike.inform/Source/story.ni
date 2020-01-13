@@ -1,9 +1,17 @@
-"Roguelike Goose" by lizzard
+"Roguelike Goose" by Lizzard
 
+The story title is "Roguelike Goose". 
+The story author is "Lizzard". 
+The story genre is "Comedy". 
+The release number is 1. 
+The story description is "It's a beautiful day in the dungeon, and you are a horrible goose." 
+The story creation year is 2020. 
 
 Use scoring;
 
 The maximum score is 12. 
+
+Release along with an interpreter and cover art ("a quick line drawing of a goose with a sword").
 
 
 Requesting the full score is an action out of world. Understand "full score" or "full" as requesting the full score. 
@@ -20,6 +28,7 @@ When play begins:
         "[the player's surroundings]";
     now the left hand status line is "[number of visited rooms]/[number of rooms] rooms / [score] points ";
 	say "It's a beautiful day in the dungeon, and you are a horrible goose.";
+	say "Thanks to Danny O'Brien and Ada Norton for playtesting.[line break]Thanks to Eunju Beck for the cover art.[paragraph break]";
 	say "Try typing 'help' for instructions on how to play.";
 
 Part 1 - Some rules for mapping
@@ -190,7 +199,7 @@ Listing stats is an action applying to nothing.
 Understand "stats" as listing stats. 
 
 Carry out listing stats:
-	say "Strength: [strength of the player]   Ferocity: [ferocity of the player]   HP: [current hp of the player]/[max hp of the player] [paragraph break]";
+	say "[line break]Strength: [strength of the player]   Ferocity: [ferocity of the player]   HP: [current hp of the player]/[max hp of the player] [paragraph break]";
 
 
 Section 2 - Things a goose can do

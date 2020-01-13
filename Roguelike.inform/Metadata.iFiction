@@ -7,13 +7,20 @@
         </identification>
         <bibliographic>
             <title>Roguelike Goose</title>
-            <author>lizzard</author>
+            <author>Lizzard</author>
             <headline>An Interactive Fiction</headline>
-            <genre>Fiction</genre>
+            <genre>Comedy</genre>
             <firstpublished>2020</firstpublished>
+            <description>It's a beautiful day in the dungeon, and you are a horrible goose.</description>
             <language>en</language>
             <group>Inform</group>
         </bibliographic>
+        <cover>
+            <format>jpg</format>
+            <height>500</height>
+            <width>630</width>
+            <description>a quick line drawing of a goose with a sword</description>
+        </cover>
         <releases>
             <attached>
                 <release>
@@ -33,6 +40,7 @@
             <serial>200112</serial>
             <release>1</release>
             <compiler>Inform 7 build 6M62</compiler>
+            <coverpicture>1</coverpicture>
         </glulx>
     </story>
 </ifindex>
